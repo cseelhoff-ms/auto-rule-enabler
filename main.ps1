@@ -53,9 +53,10 @@ Write-Host "$($ruleTemplates.count) Analytic Rules found"
 # Loop through rule templates and create rules
 foreach ($ruleTemplate in $ruleTemplates) {
     $ruleId = $ruleTemplate.properties.contentId
-    $rule = $ruleTemplate.properties.mainTemplate.resources | Where-Object type -eq 'Microsoft.SecurityInsights/AlertRuleTemplates' | Select-Object -First 1
+    #$rule = $ruleTemplate.properties.mainTemplate.resources | Where-Object type -eq 'Microsoft.SecurityInsights/AlertRuleTemplates' | Select-Object -First 1
+    $rule = $ruleTemplate.properties.mainTemplate.resources | Where-Object type -Like '*AlertRule*' | Select-Object -First 1
     $ruleName = $rule.properties.displayName
-
+    write-host "Processing rule $ruleName"
     # Verify if the rule already exists
     $apiPath = "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.OperationalInsights/workspaces/$workspaceName/providers/Microsoft.SecurityInsights/alertRules/$($ruleId)?api-version=$apiVersion"
     $result = Invoke-AzRestMethod -Method GET -path $apiPath
