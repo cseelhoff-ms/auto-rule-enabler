@@ -58,6 +58,7 @@ foreach ($ruleTemplate in $ruleTemplates) {
     $ruleName = $rule.properties.displayName
     write-host "Processing rule $ruleName"
     # Verify if the rule already exists
+    # FIX: Duplicates can still exist. Better to search on ruleTemplateId somehow
     $apiPath = "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.OperationalInsights/workspaces/$workspaceName/providers/Microsoft.SecurityInsights/alertRules/$($ruleId)?api-version=$apiVersion"
     $result = Invoke-AzRestMethod -Method GET -path $apiPath
     if ($result.StatusCode -ne 404) {
