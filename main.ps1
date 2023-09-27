@@ -11,6 +11,7 @@ foreach ($module in $modules) {
 
 # Import modules
 foreach ($module in $modules) {
+    Write-Host "Importing $module module" -ForegroundColor Yellow
     Import-Module $module -ErrorAction Stop
 }
 
