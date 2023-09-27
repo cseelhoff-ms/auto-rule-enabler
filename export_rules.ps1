@@ -46,9 +46,9 @@ if ($workspaceName -eq '') {
 
 # Select the resource group to use
 $sentinelWorkspaces | Where-Object Name -eq $workspaceName | Select-Object -ExpandProperty ResourceGroupName | Format-Table
-if(!$resourceGroupName) {
+#if(!$resourceGroupName) {
     $resourceGroupName = Read-Host -Prompt 'Enter the resource group name (leave blank to select first resource group name)'
-}
+#}
 if ($resourceGroupName -eq '') {
     $resourceGroupName = $sentinelWorkspaces | Where-Object Name -eq $workspaceName | Select-Object -First 1 -ExpandProperty ResourceGroupName
 }
@@ -69,7 +69,7 @@ $apiVersion = '2023-02-01'
 foreach ($alert in $alerts) {
     Write-Host "Processing rule $($alert.properties.displayName)"
     $alertIDshort = $alert.id.Split('/')[-1]
-    $resourceGroupName = $alert.id.Split('/')[4]
+    #$resourceGroupName = $alert.id.Split('/')[4]
     $arm = new-object -TypeName PSObject
     $arm | Add-Member -NotePropertyName '$schema' -NotePropertyValue 'https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#'
     $arm | Add-Member -NotePropertyName 'contentVersion' -NotePropertyValue '1.0.0.0'
