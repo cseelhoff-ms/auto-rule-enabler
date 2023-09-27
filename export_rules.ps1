@@ -43,7 +43,15 @@ if(!$workspaceName) {
 if ($workspaceName -eq '') {
     $workspaceName = $sentinelWorkspaces | Select-Object -First 1 -ExpandProperty Name
 }
-$resourceGroupName = $sentinelWorkspaces | Where-Object Name -eq $workspaceName | Select-Object -ExpandProperty ResourceGroupName
+
+# Select the resource group to use
+$sentinelWorkspaces | Where-Object Name -eq $workspaceName | Select-Object -ExpandProperty ResourceGroupName | Format-Table
+if(!$resourceGroupName) {
+    $resourceGroupName = Read-Host -Prompt 'Enter the resource group name (leave blank to select first resource group name)'
+}
+if ($resourceGroupName -eq '') {
+    $resourceGroupName = $sentinelWorkspaces | Where-Object Name -eq $workspaceName | Select-Object -First 1 -ExpandProperty ResourceGroupName
+}
 
 # Set API version
 $apiVersion = '2023-06-01-preview'
