@@ -24,7 +24,7 @@ if(!(Get-AzContext)) {
 Get-AzSubscription | Select-Object Name, Id | Format-Table
 
 # Select the subscription to use
-if(!$subscriptionId) {
+if(!$subscriptionId -or $subscriptionId -eq '') {
     $subscriptionId = Read-Host -Prompt 'Enter the subscription ID (leave blank to select first subscription id)'
 }
 if ($subscriptionId -eq '') {
@@ -37,7 +37,7 @@ $sentinelWorkspaces = Get-AzResource -ResourceType Microsoft.OperationalInsights
 $sentinelWorkspaces | Format-Table
 
 # Select the sentinel workspace to use
-if(!$workspaceName) {
+if(!$workspaceName -or $workspaceName -eq '') {
     $workspaceName = Read-Host -Prompt 'Enter the workspace name (leave blank to select first workspace name)'
 }
 if ($workspaceName -eq '') {
@@ -45,10 +45,10 @@ if ($workspaceName -eq '') {
 }
 
 # Select the resource group to use
-$sentinelWorkspaces | Where-Object Name -eq $workspaceName | Select-Object -ExpandProperty ResourceGroupName | Format-Table
-#if(!$resourceGroupName) {
+$sentinelWorkspaces | Where-Object Name -eq $workspaceName | Select-Object ResourceGroupName | Format-Table
+if(!$resourceGroupName -or $resourceGroupName -eq '') {
     $resourceGroupName = Read-Host -Prompt 'Enter the resource group name (leave blank to select first resource group name)'
-#}
+}
 if ($resourceGroupName -eq '') {
     $resourceGroupName = $sentinelWorkspaces | Where-Object Name -eq $workspaceName | Select-Object -First 1 -ExpandProperty ResourceGroupName
 }
