@@ -16,42 +16,35 @@ foreach ($module in $modules) {
 }
 
 # Login to Azure
-if(!(Get-AzContext)) {
-    Connect-AzAccount -ErrorAction Stop | Out-Null
-}
+Connect-AzAccount -ErrorAction Stop | Out-Null
 
 # Display all subscriptions for the logged in user
 Get-AzSubscription | Select-Object Name, Id | Format-Table
 
-# Select the subscription to use
-if(!$subscriptionId -or $subscriptionId -eq '') {
-    $subscriptionId = Read-Host -Prompt 'Enter the subscription ID (leave blank to select first subscription id)'
-}
-if ($subscriptionId -eq '') {
+# if there is only 1 subscription, select it, otherwise prompt the user to select a subscription
+if ((Get-AzSubscription).Count -eq 1) {
     $subscriptionId = Get-AzSubscription | Select-Object -First 1 -ExpandProperty Id
+} else {
+    $subscriptionId = Read-Host -Prompt 'Enter the subscription ID:'
+    Set-AzContext -SubscriptionId $subscriptionId
 }
-Set-AzContext -SubscriptionId $subscriptionId
 
-# List all sentinel resources
-$sentinelWorkspaces = Get-AzResource -ResourceType Microsoft.OperationalInsights/workspaces | Select-Object Name, ResourceGroupName, Location
-$sentinelWorkspaces | Format-Table
+#get az resource for all solutions with the name starting with SecurityInsights(
+$securityInsightsSolutions = Get-AzResource -ResourceType Microsoft.OperationsManagement/solutions | Where-Object { $_.Name -like 'SecurityInsights(*' } | Select-Object -ExpandProperty Name | ForEach-Object { $_.Substring(17, $_.length -18) }
 
-# Select the sentinel workspace to use
-if(!$workspaceName -or $workspaceName -eq '') {
-    $workspaceName = Read-Host -Prompt 'Enter the workspace name (leave blank to select first workspace name)'
-}
-if ($workspaceName -eq '') {
+# get all workspaces that are installed with sentinel
+$workspaces = Get-AzResource -ResourceType Microsoft.OperationalInsights/workspaces
+$sentinelWorkspaces = $workspaces | Where-Object { $_.Name -in $securityInsightsSolutions }
+$sentinelWorkspaces | Select-Object Name, ResourceGroupName, Location | Format-Table
+
+# if there is only 1 workspace, select it, otherwise prompt the user to select a workspace
+if ($sentinelWorkspaces.Count -eq 1) {
     $workspaceName = $sentinelWorkspaces | Select-Object -First 1 -ExpandProperty Name
+} else {
+    $workspaceName = Read-Host -Prompt 'Enter the workspace name:'
 }
 
-# Select the resource group to use
-$sentinelWorkspaces | Where-Object Name -eq $workspaceName | Select-Object ResourceGroupName | Format-Table
-if(!$resourceGroupName -or $resourceGroupName -eq '') {
-    $resourceGroupName = Read-Host -Prompt 'Enter the resource group name (leave blank to select first resource group name)'
-}
-if ($resourceGroupName -eq '') {
-    $resourceGroupName = $sentinelWorkspaces | Where-Object Name -eq $workspaceName | Select-Object -First 1 -ExpandProperty ResourceGroupName
-}
+$resourceGroupName = $sentinelWorkspaces | Where-Object Name -eq $workspaceName | Select-Object -ExpandProperty ResourceGroupName
 
 # Set API version
 $apiVersion = '2023-06-01-preview'
@@ -65,7 +58,7 @@ $alerts = $alerts.Content | ConvertFrom-Json | Select-Object -ExpandProperty 'va
 Write-Host "$($alerts.count) Rules found"
 
 $apiVersion = '2023-02-01'
-# Loop through aleert rules and export as arm templates
+# Loop through alert rules and export as arm templates
 foreach ($alert in $alerts) {
     Write-Host "Processing rule $($alert.properties.displayName)"
     $alertIDshort = $alert.id.Split('/')[-1]
@@ -95,7 +88,8 @@ foreach ($alert in $alerts) {
     #$alertID = $alert.id -split '/'
     #$alert.id = ($alertID[0..4] + $alertID[-4..-1]) -join '/'
     $alert.type = 'Microsoft.OperationalInsights/workspaces/providers/alertRules'
-    $alert.name = $workspaceName + '/Microsoft.SecurityInsights/' + $alertIDshort
+    #$alert.name = $workspaceName + '/Microsoft.SecurityInsights/' + $alertIDshort
+    $alert.name = $alertIDshort
     $alert.PSObject.Properties.Remove('etag')
     $alert.properties.PSObject.Properties.Remove('lastModifiedUtc')
     $resources = @($alert)
