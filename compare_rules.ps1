@@ -1,10 +1,16 @@
-if($expires -lt ((New-TimeSpan -Start (Get-Date '1970-01-01 00:00:00') -End ((Get-Date).ToUniversalTime())).TotalSeconds) + 600) {
-    $clientId = "e1ab09b4-7b37-46ee-b1cf-1c07469b26d2"
-    $tenantId = "00ac9db9-508a-473b-aded-53250025bd24"
+# Set API version
+$exportSentinelRulesAsJson = $false
+$apiVersion = '2023-06-01-preview'
 
-    Add-Type -AssemblyName System.Web
-    $scope = [System.Web.HttpUtility]::UrlEncode("https://api.securitycenter.windows.com/Alert.Read")
-
+function Get-AccessToken {
+    param(
+        [Parameter(Mandatory=$true)]
+        [string]$clientId,
+        [Parameter(Mandatory=$true)]
+        [string]$tenantId,
+        [Parameter(Mandatory=$true)]
+        [string]$scope
+    )
     $bodyDeviceCode = (
         "client_id=$clientId" +
         "&scope=$scope"
@@ -42,56 +48,65 @@ if($expires -lt ((New-TimeSpan -Start (Get-Date '1970-01-01 00:00:00') -End ((Ge
             }
         }
     }
+    return $accessToken
+}
+
+function Get-ExpirationTime {
+    param(
+        [Parameter(Mandatory=$true)]
+        [string]$accessToken
+    )
     $tokenheader = $accessToken.Split(".")[0].Replace('-', '+').Replace('_', '/')
     $tokenheader = $accessToken.Split(".")[0].Replace('-', '+').Replace('_', '/')
     while ($tokenheader.Length % 4) { Write-Verbose "Invalid length for a Base-64 char array or string, adding ="; $tokenheader += "=" }
     $tokenPayload = $accessToken.Split(".")[1].Replace('-', '+').Replace('_', '/')
     while ($tokenPayload.Length % 4) { Write-Verbose "Invalid length for a Base-64 char array or string, adding ="; $tokenPayload += "=" }
     $tokenByteArray = [System.Convert]::FromBase64String($tokenPayload)
-    $tokenArray = [System.Text.Encoding]::ASCII.GetString($tokenByteArray)
-    $ta = $tokenArray | ConvertFrom-Json
-    $expires = $ta.exp
+    $tokenArrayJson = [System.Text.Encoding]::ASCII.GetString($tokenByteArray)
+    $tokenArrayObject = $tokenArrayJson | ConvertFrom-Json
+    return $tokenArrayObject.exp
+}
+
+if($expires -lt ((New-TimeSpan -Start (Get-Date '1970-01-01 00:00:00') -End ((Get-Date).ToUniversalTime())).TotalSeconds) + 600) {
+    Add-Type -AssemblyName System.Web
+    $clientId = "e1ab09b4-7b37-46ee-b1cf-1c07469b26d2"
+    $tenantId = "00ac9db9-508a-473b-aded-53250025bd24"
+
+    $scope = [System.Web.HttpUtility]::UrlEncode("https://management.azure.com/user_impersonation")
+    $accessToken = Get-AccessToken -clientId $clientId -tenantId $tenantId -scope $scope    
+    $azureManagementHeaders = @{"Authorization" = "Bearer $accessToken"}
+    $expires = Get-ExpirationTime -accessToken $accessToken
+
+    #$scope = [System.Web.HttpUtility]::UrlEncode("https://api.securitycenter.windows.com/Alert.Read")
+    #$accessToken = Get-AccessToken -clientId $clientId -tenantId $tenantId -scope $scope    
+    #$securityCenterHeaders = @{"Authorization" = "Bearer $accessToken"}
 }
 
 if($null -eq $resourceGroupName) {
-    # Define required modules
-    $modules = @('Az.Accounts', 'Az.SecurityInsights', 'Az.Resources')
-
-    # Check if modules exist and install if needed
-    foreach ($module in $modules) {
-        if (!(Get-Module -ListAvailable $module)) {
-            Write-Host "Installing $module module" -ForegroundColor Yellow
-            Install-Module $module -Scope CurrentUser -AllowClobber -Force
-        }
-    }
-
-    # Import modules
-    foreach ($module in $modules) {
-        Write-Host "Importing $module module" -ForegroundColor Yellow
-        Import-Module $module -ErrorAction Stop
-    }
-
-    # Login to Azure
-    Connect-AzAccount -ErrorAction Stop | Out-Null
-
     # Display all subscriptions for the logged in user
-    Get-AzSubscription | Select-Object Name, Id | Format-Table
+    $uri = "https://management.azure.com/subscriptions?api-version=2023-07-01"
+    $subscriptions = Invoke-RestMethod -Method GET -Uri $uri -Headers $azureManagementHeaders
+    $subscriptions = $subscriptions.value
+    $subscriptions | Select-Object displayName, subscriptionId | Format-Table
 
     # if there is only 1 subscription, select it, otherwise prompt the user to select a subscription
     if ((Get-AzSubscription).Count -eq 1) {
-        $subscriptionId = Get-AzSubscription | Select-Object -First 1 -ExpandProperty Id
+        $subscriptionId = $subscriptions | Select-Object -First 1 -ExpandProperty subscriptionId
     } else {
         $subscriptionId = Read-Host -Prompt 'Enter the subscription ID:'
-        Set-AzContext -SubscriptionId $subscriptionId
     }
 
     #get az resource for all solutions with the name starting with SecurityInsights(
-    $securityInsightsSolutions = Get-AzResource -ResourceType Microsoft.OperationsManagement/solutions | Where-Object { $_.Name -like 'SecurityInsights(*' } | Select-Object -ExpandProperty Name | ForEach-Object { $_.Substring(17, $_.length -18) }
+    $uri = "https://management.azure.com/subscriptions/$subscriptionId/providers/Microsoft.OperationsManagement/solutions?api-version=2015-11-01-preview"
+    $securityInsightsSolutions = Invoke-RestMethod -Method GET -Uri $uri -Headers $azureManagementHeaders 
+    $securityInsightsSolutions = $securityInsightsSolutions.value | Where-Object { $_.Name -like 'SecurityInsights(*' } | Select-Object -ExpandProperty Name | ForEach-Object { $_.Substring(17, $_.length -18) }
 
     # get all workspaces that are installed with sentinel
-    $workspaces = Get-AzResource -ResourceType Microsoft.OperationalInsights/workspaces
+    $uri = "https://management.azure.com/subscriptions/$subscriptionId/providers/Microsoft.OperationalInsights/workspaces?api-version=2022-10-01"
+    $workspaces = Invoke-RestMethod -Method GET -Uri $uri -Headers $azureManagementHeaders
+    $workspaces = $workspaces.value
     $sentinelWorkspaces = $workspaces | Where-Object { $_.Name -in $securityInsightsSolutions }
-    $sentinelWorkspaces | Select-Object Name, ResourceGroupName, Location | Format-Table
+    $sentinelWorkspaces | Select-Object name, location | Format-Table
 
     # if there is only 1 workspace, select it, otherwise prompt the user to select a workspace
     if ($sentinelWorkspaces.Count -eq 1) {
@@ -99,22 +114,18 @@ if($null -eq $resourceGroupName) {
     } else {
         $workspaceName = Read-Host -Prompt 'Enter the workspace name:'
     }
-
-    $resourceGroupName = $sentinelWorkspaces | Where-Object Name -eq $workspaceName | Select-Object -ExpandProperty ResourceGroupName
-
-    # Set API version
-    $apiVersion = '2023-06-01-preview'
+    $sentinelWorkspacesId = $sentinelWorkspaces | Where-Object Name -eq $workspaceName | Select-Object -ExpandProperty id
+    $resourceGroupName = ($sentinelWorkspacesId | Select-String -Pattern "/resourceGroups/([^/]+)").Matches.Groups[1].Value
 }
 
 # Invoke API request to get alerts
-$alerts = Invoke-AzRestMethod -Method GET -path "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.OperationalInsights/workspaces/$workspaceName/providers/Microsoft.SecurityInsights/alertRules?api-version=$apiVersion"
-
-$alerts = $alerts.Content | ConvertFrom-Json | Select-Object -ExpandProperty 'value' | Where-Object { $_.kind -in @('Scheduled', 'NRT') }
+$uri = "https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.OperationalInsights/workspaces/$workspaceName/providers/Microsoft.SecurityInsights/alertRules?api-version=$apiVersion"
+$alerts = Invoke-RestMethod -Method GET -Uri $uri -Headers $azureManagementHeaders
+$alerts = $alerts.value | Where-Object { $_.kind -in @('Scheduled', 'NRT') }
 
 # Output number of  rules found
 Write-Host "$($alerts.count) Rules found"
 
-$apiVersion = '2023-02-01'
 # Loop through alert rules and export as arm templates
 $formattedAlerts = @{}
 foreach ($alert in $alerts) {
@@ -153,11 +164,13 @@ foreach ($alert in $alerts) {
     $resources = @($alert)
     $arm | Add-Member -NotePropertyName 'resources' -NotePropertyValue $resources
     $formattedAlerts.Add($alertIDshort, $resources)
-    #$arm | ConvertTo-Json -Depth 99 | Out-File -FilePath "Detections\$($alertIDshort).json"
+    if($exportSentinelRulesAsJson) {
+        $arm | ConvertTo-Json -Depth 99 | Out-File -FilePath "detections\$($alertIDshort).json"
+    }
 }
 
 #loop through each json in detections folder, and compare to the formatted alerts
-$detections = Get-ChildItem -Path Detections -Filter *.json
+$detections = Get-ChildItem -Path detections -Filter *.json
 
 function Compare-PSObjects {
     param (
@@ -239,64 +252,64 @@ foreach ($detection in $detections) {
         $formattedAlert = $formattedAlerts[$detectionName]
         $detectionContent = Get-Content $detection.FullName | ConvertFrom-Json | Select-Object -ExpandProperty resources
         $differences = Compare-PSObjects $formattedAlert $detectionContent
-        #if ($differences.Count -eq 1) {
-        #    if ($differences[0].Property -eq 'properties.sentinelEntitiesMappings') {
-        #        continue
-        #    }
-        #}
         if ($differences.Count -gt 0) {
             #$differences | Format-Table
             #Write-Host "There are differences between the objects: $detectionName" -ForegroundColor Yellow
             $arrayOfDifferences = New-Object System.Collections.ArrayList
             foreach ($difference in $differences) {
                 $null = $arrayOfDifferences.Add([PSCustomObject]@{
+                    ruleName = $detectionName
                     property = $difference.Property
                     sentinel = $difference.Value1
                     repo = $difference.Value2
                 })
             }
             $rulesWithDifferences.Add($detectionName, $arrayOfDifferences)
-            $detectionName
-            $arrayOfDifferences | Format-Table
+            #$detectionName
+            #$arrayOfDifferences | Format-Table
         } else {
             #Write-Host "The objects are identical for: $detectionName"
         }
     } else {
         #Write-Host "The object does not exist in the repo: $detectionName" -ForegroundColor Yellow
-        #Read-Host -Prompt "Press Enter to continue"
         $arrayOfDifferences = New-Object System.Collections.ArrayList
         $null = $arrayOfDifferences.Add(
         [PSCustomObject]@{
+            ruleName = $detectionName
             property = '(NEW)'
             sentinel = '(null)'
             repo = '(NEW)'
         })
         $rulesWithDifferences.Add($detectionName, $arrayOfDifferences)
-        $detectionName
-        $arrayOfDifferences | Format-Table
+        #$detectionName
+        #$arrayOfDifferences | Format-Table
     }
 }
 
-
-
-$headers = @{"Authorization" = "Bearer $accessToken"}
+$rulesWithDifferences.Values | Format-Table
 $uri = 'https://prod-85.eastus.logic.azure.com:443/workflows/5d28dc4c29c04cea85032c20659b5c33/triggers/manual/paths/invoke?api-version=2016-10-01'
 
 foreach($ruleName in $rulesWithDifferences.Keys) {
-    $ruleName
+    #$ruleName
     $ruleDifferences = $rulesWithDifferences[$ruleName]
     $ruleDifferences | Format-Table
     $newRule = Get-Content "Detections/$($ruleName).json" -Raw | ConvertFrom-Json
     $resource = $newRule.resources[0]
+    $query = (((((($resource.properties.query | convertto-json -depth 99) -replace '"', '') -replace "'", '')) -creplace '\\n', "`n") -replace '\\', '')-creplace "`n", "\n`n"
+    #$query = 'test'
+    Write-Host $query
+    Read-Host -Prompt "Press Enter to update this rule in Sentinel"
     $body = @{
         'ruleID' = $resource.id
         'ruleName' = $ruleName
         'ruleDifferences' = $ruleDifferences
         'resource' = $resource
-    } | ConvertTo-Json -Depth 99
+        'displayName' = $resource.properties.displayName
+        'query' = $query
+    } | ConvertTo-Json
     #$body | out-file body.json
-    Invoke-RestMethod -Method Put -Uri $uri -Body $body -Headers $headers -ContentType "application/json"
-    #Read-Host -Prompt "Press Enter to continue"
+    $null = Invoke-RestMethod -Method Put -Uri $uri -Body $body -Headers $azureManagementHeaders -ContentType "application/json"
+    
 }
 
 
