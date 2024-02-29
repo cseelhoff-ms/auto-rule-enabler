@@ -147,8 +147,8 @@ $installedContent = $installedContentJSON.Content | ConvertFrom-Json | Select-Ob
 $installedContent | Select-Object -ExpandProperty properties | Select-Object -Property contentId, displayName, installedVersion, @{Name='authorName'; Expression={$_.author.name}} | ConvertTo-Json | Out-File installed.json
 
 #read installed.json file
-$contentToInstall = Get-Content installed.json | ConvertFrom-Json
-$contentToInstall | Out-GridView
+#$contentToInstall = Get-Content installed.json | ConvertFrom-Json
+#$contentToInstall | Out-GridView
 
 # Invoke API request to get templates
 $templates = Invoke-AzRestMethod -Method GET -path "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.OperationalInsights/workspaces/$workspaceName/providers/Microsoft.SecurityInsights/contentTemplates?api-version=$apiVersion"
