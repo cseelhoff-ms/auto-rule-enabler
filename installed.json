@@ -1,0 +1,3674 @@
+[
+  {
+    "contentId": "42crunch1580391915541.42crunch_sentinel_solution",
+    "displayName": "42Crunch Microsoft Sentinel Connector",
+    "installedVersion": null,
+    "authorName": "42Crunch"
+  },
+  {
+    "contentId": "abnormalsecuritycorporation1593011233180.fe1b4806-215b-4610-bf95-965a7a65579c",
+    "displayName": "Abnormal Security Events",
+    "installedVersion": null,
+    "authorName": "AbnormalSecurity"
+  },
+  {
+    "contentId": "argoscloudsecurity1605618416175.argos-sentinel",
+    "displayName": "ARGOS Cloud Security",
+    "installedVersion": null,
+    "authorName": "ARGOS Cloud Security"
+  },
+  {
+    "contentId": "arista-networks.awake-security",
+    "displayName": "Arista NDR",
+    "installedVersion": null,
+    "authorName": "Arista Networks"
+  },
+  {
+    "contentId": "armorblox1601081599926.armorblox_sentinel_1",
+    "displayName": "Armorblox",
+    "installedVersion": null,
+    "authorName": "Armorblox"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-proofpoint",
+    "displayName": "Proofpoint TAP",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-proofpointpod",
+    "displayName": "Proofpoint On demand (POD) Email Security",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-qualysvm",
+    "displayName": "Qualys VM",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-abuseipdb",
+    "displayName": "AbuseIPDB",
+    "installedVersion": "3.0.0",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-akamai",
+    "displayName": "Akamai Security",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-alibabacloud",
+    "displayName": "Alibaba Cloud",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-amazonwebservices",
+    "displayName": "Amazon Web Services",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-amazonwebservicesiam",
+    "displayName": "AWS IAM",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-apachehttpserver",
+    "displayName": "Apache Http Server",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-apachelog4jvulnerability",
+    "displayName": "Log4j Vulnerability Detection",
+    "installedVersion": "3.0.0",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-apachetomcat",
+    "displayName": "Apache Tomcat",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-arubaclearpass",
+    "displayName": "Aruba ClearPass",
+    "installedVersion": null,
+    "authorName": "Aruba Networks"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-atlassianconfluenceaudit",
+    "displayName": "Atlassian Confluence Audit",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-atlassianjiraaudit",
+    "displayName": "Atlassian Jira Audit",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-attackertools",
+    "displayName": "Attacker Tools Threat Protection Essentials",
+    "installedVersion": "3.0.0",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-australiancybersecurity",
+    "displayName": "Australian Cyber Security Centre",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-auth0",
+    "displayName": "Auth0",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-automated-logic-webctrl",
+    "displayName": "Automated Logic WebCTRL",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-awsathena",
+    "displayName": "AWS Athena",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-awssystemsmanager",
+    "displayName": "AWS Systems Manager",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-azureactivedirectory",
+    "displayName": "Microsoft Entra ID",
+    "installedVersion": "3.0.8",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-azureactivedirectoryip",
+    "displayName": "Microsoft Entra ID Protection",
+    "installedVersion": "3.0.0",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-azureactivity",
+    "displayName": "Azure Activity",
+    "installedVersion": "3.0.0",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-azurecognitivesearch",
+    "displayName": "Azure Cognitive Search",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-azureddosprotection",
+    "displayName": "Azure DDoS Protection",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-azuredevopsauditing",
+    "displayName": "Azure DevOps Auditing",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-azurekeyvault",
+    "displayName": "Azure Key Vault",
+    "installedVersion": "2.0.5",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-azurekubernetes",
+    "displayName": "Azure Kubernetes Service (AKS)",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-azurepurview",
+    "displayName": "Microsoft Purview",
+    "installedVersion": "2.0.7",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-azuresecuritybenchmark",
+    "displayName": "Azure Security Benchmark",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-azurestorageaccount",
+    "displayName": "Azure Storage",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-azurewebapplicationfirewal",
+    "displayName": "Azure Web Application Firewall",
+    "installedVersion": "2.0.4",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-batchaccount",
+    "displayName": "Azure Batch Account",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-bec_financialfraud",
+    "displayName": "Business Email Compromise - Financial Fraud",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-bitglass",
+    "displayName": "Bitglass",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-blackberrycylanceprotect",
+    "displayName": "Blackberry CylancePROTECT",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-box",
+    "displayName": "Box",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-broadcomsymantecdlp",
+    "displayName": "Broadcom SymantecDLP",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-checkphishbybolster",
+    "displayName": "CheckPhish by Bolster",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-ciscoaci",
+    "displayName": "Cisco ACI",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-ciscoasa",
+    "displayName": "Cisco ASA",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-ciscoduosecurity",
+    "displayName": "Cisco Duo Security",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-ciscoise",
+    "displayName": "Cisco ISE",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-ciscomeraki",
+    "displayName": "Cisco Meraki",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-ciscosecureendpoint",
+    "displayName": "Cisco Secure Endpoint",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-ciscoseg",
+    "displayName": "Cisco SEG",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-ciscostealthwatch",
+    "displayName": "Cisco Stealthwatch",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-ciscoucs",
+    "displayName": "Cisco UCS",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-ciscoumbrella",
+    "displayName": "Cisco Umbrella",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-ciscowsa",
+    "displayName": "Cisco WSA",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-citrixadc",
+    "displayName": "Citrix ADC",
+    "installedVersion": null,
+    "authorName": "Microsoft-support@microsoft.com"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-claroty",
+    "displayName": "Claroty",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-cloudflare",
+    "displayName": "Cloudflare (Deprecated)",
+    "installedVersion": null,
+    "authorName": "Cloudflare"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-cloudservicedetection",
+    "displayName": "Cloud Service Threat Protection Essentials",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-cloudthreatdetection",
+    "displayName": "Cloud Identity Threat Protection Essentials",
+    "installedVersion": "3.0.0",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-cmmcv2",
+    "displayName": "Cybersecurity Maturity Model Certification (CMMC) 2.0",
+    "installedVersion": "2.0.5",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-commoneventformat",
+    "displayName": "Common Event Format",
+    "installedVersion": "2.0.2",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-continuousdiagnostics",
+    "displayName": "Continuous Diagnostics& Mitigation",
+    "installedVersion": "3.0.0",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-crowdstrikefalconep",
+    "displayName": "CrowdStrike Falcon Endpoint Protection",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-datalakestoragegen1",
+    "displayName": "Azure Data Lake Storage Gen1",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-dev0270detectionandhunting",
+    "displayName": "Dev 0270 Detection and Hunting",
+    "installedVersion": "2.0.2",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-digitalguardiandlp",
+    "displayName": "Digital Guardian Data Loss Prevention",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-dns",
+    "displayName": "Windows Server DNS",
+    "installedVersion": "2.0.5",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-dns-domain",
+    "displayName": "DNS Essentials",
+    "installedVersion": "3.0.0",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-eatonforeseer",
+    "displayName": "Eaton Foreseer",
+    "installedVersion": "2.0.0",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-eclecticiqtip",
+    "displayName": "EclecticIQ",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-elasticagent",
+    "displayName": "Elastic Agent",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-endpointthreat",
+    "displayName": "Endpoint Threat Protection Essentials",
+    "installedVersion": "3.0.0",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-entrustidentity",
+    "displayName": "Entrust identity as Service",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-eventhub",
+    "displayName": "Azure Event Hubs",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-exabeamadvancedanalytics",
+    "displayName": "Exabeam Advanced Analytics",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-fireeyenx",
+    "displayName": "FireEye Network Security",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-forescout",
+    "displayName": "Forescout",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-fortinetfortigate",
+    "displayName": "Fortinet FortiGate Next-Generation Firewall connector",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-fortiwebcloud",
+    "displayName": "Fortinet FortiWeb Cloud WAF-as-a-Service connector",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-gcpbigquery",
+    "displayName": "Google Cloud Platform BigQuery",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-gcpdns",
+    "displayName": "Google Cloud Platform DNS",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-gcpiam",
+    "displayName": "Google Cloud Platform IAM",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-gcpmonitoring",
+    "displayName": "Google Cloud Platform Cloud Monitoring",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-gitlab",
+    "displayName": "Gitlab",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-googleapigeex",
+    "displayName": "Google ApigeeX",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-googleworkspacereports",
+    "displayName": "Google Workspace Reports",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-illumiocore",
+    "displayName": "Illumio Core",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-impervawafcloud",
+    "displayName": "Imperva WAF Cloud",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-infobloxnios",
+    "displayName": "Infoblox NIOS",
+    "installedVersion": null,
+    "authorName": "Infoblox"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-insiderriskmanagement",
+    "displayName": "Microsoft Purview Insider Risk Management",
+    "installedVersion": "3.0.4",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-ioclegacy",
+    "displayName": "Legacy IOC based Threat Protection",
+    "installedVersion": "3.0.1",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-iscbind",
+    "displayName": "ISC Bind",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-ivantiuem",
+    "displayName": "Ivanti Unified Endpoint Management",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-jboss",
+    "displayName": "Jboss",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-juniperidp",
+    "displayName": "Juniper IDP",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-junipersrx",
+    "displayName": "Juniper SRX",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-kasperskysc",
+    "displayName": "Kaspersky Security Center",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-logicapps",
+    "displayName": "Azure Logic Apps",
+    "installedVersion": "2.0.0",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-marklogicaudit",
+    "displayName": "MarkLogic Audit",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-maturitymodelforeventlogma",
+    "displayName": "Maturity Model For Event Log Management M2131",
+    "installedVersion": "3.0.1",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-mcafeeepo",
+    "displayName": "McAfee ePolicy Orchestrator",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-mcafeensp",
+    "displayName": "McAfee Network Security Platform",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-mdefenderforidentity",
+    "displayName": "Microsoft Defender for Identity",
+    "installedVersion": "2.0.1",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-microsoft365defender",
+    "displayName": "Microsoft Defender XDR",
+    "installedVersion": "3.0.1",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-microsoftdefendercloudapps",
+    "displayName": "Microsoft Defender for Cloud Apps",
+    "installedVersion": "2.0.2",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-microsoftdefenderendpoint",
+    "displayName": "Microsoft Defender for Endpoint",
+    "installedVersion": "3.0.1",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-microsoftdefenderforcloud",
+    "displayName": "Microsoft Defender for Cloud",
+    "installedVersion": "3.0.0",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-microsoftdefenderforo365",
+    "displayName": "Microsoft Defender for Office 365",
+    "installedVersion": "3.0.1",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-microsoftdefenderthreatint",
+    "displayName": "Microsoft Defender Threat Intelligence",
+    "installedVersion": "3.0.0",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-microsoftpowerbi",
+    "displayName": "Microsoft PowerBI",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-microsoftproject",
+    "displayName": "Microsoft Project",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-minemeld",
+    "displayName": "Minemeld",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-mip",
+    "displayName": "Microsoft Purview Information Protection",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-mitreattck",
+    "displayName": "Threat Analysis & Response",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-mongodbaudit",
+    "displayName": "MongoDB Audit",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-mulesoft",
+    "displayName": "Mulesoft",
+    "installedVersion": "2.0.1",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-multicloudattackcoverage",
+    "displayName": "Multi Cloud Attack Coverage Essentials - Resource Abuse",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-networksecuritygroup",
+    "displayName": "Azure Network Security Groups",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-networksession",
+    "displayName": "Network Session Essentials",
+    "installedVersion": "3.0.0",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-networkthreatdetection",
+    "displayName": "Network Threat Protection Essentials",
+    "installedVersion": "2.0.2",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-netwrixauditor",
+    "displayName": "Netwrix Auditor",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-neustaripgeopoint",
+    "displayName": "Neustar IP GeoPoint",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-nginx",
+    "displayName": "Nginx",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-nistsp80053",
+    "displayName": "NIST SP 800-53",
+    "installedVersion": "3.0.0",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-nozominetworks",
+    "displayName": "Nozomi Networks",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-ocilogs",
+    "displayName": "Oracle Cloud Infrastructure",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-office365",
+    "displayName": "Microsoft 365",
+    "installedVersion": "3.0.0",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-okta",
+    "displayName": "Okta Single Sign-On",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-oneloginiam",
+    "displayName": "OneLogin IAM",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-opencti",
+    "displayName": "OpenCTI",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-openvpn",
+    "displayName": "OpenVPN",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-oracledbaudit",
+    "displayName": "Oracle Database Audit",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-oracleweblogicserver",
+    "displayName": "Oracle WebLogic Server",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-ossec",
+    "displayName": "OSSEC",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-paloaltocdl",
+    "displayName": "Palo Alto Networks Cortex Data Lake",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-paloaltopanos",
+    "displayName": "Palo Alto PAN-OS",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-paloaltoprisma",
+    "displayName": "Palo Alto Prisma Cloud CSPM",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-pcidsscompliance",
+    "displayName": "PCI DSS Compliance",
+    "installedVersion": "2.0.2",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-pingfederate",
+    "displayName": "PingFederate",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-postgresql",
+    "displayName": "PostgreSQL",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-prismacloudcompute",
+    "displayName": "Palo Alto Prisma Cloud CWPP",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-pulseconnectsecure",
+    "displayName": "Pulse Connect Secure",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-qualysvmknowledgebase",
+    "displayName": "Qualys VM Knowledgebase",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-rapid7insightvm",
+    "displayName": "InsightVM CloudAPI",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-riskiq",
+    "displayName": "RiskIQ Illuminate",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-salesforceservicecloud",
+    "displayName": "Salesforce Service Cloud",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-securid",
+    "displayName": "RSA SecurID",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-securityevents",
+    "displayName": "Windows Security Events",
+    "installedVersion": "3.0.0",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-securitythreatessentialsol",
+    "displayName": "Security Threat Essentials",
+    "installedVersion": "3.0.1",
+    "authorName": "Microsoft Corporation"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-sentinelone",
+    "displayName": "SentinelOne",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-sentinelsoaressentials",
+    "displayName": "Sentinel SOAR Essentials",
+    "installedVersion": "3.0.2",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-servicebus",
+    "displayName": "Azure Service Bus",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-servicenow",
+    "displayName": "ServiceNow",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-shodan",
+    "displayName": "Shodan",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-slackaudit",
+    "displayName": "Slack Audit",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-snowflake",
+    "displayName": "Snowflake",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-socprocessframework",
+    "displayName": "SOC Process Framework",
+    "installedVersion": "3.0.0",
+    "authorName": "Rin Ure"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-sophosep",
+    "displayName": "Sophos Endpoint Protection",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-sophosxgfirewall",
+    "displayName": "Sophos XG Firewall",
+    "installedVersion": null,
+    "authorName": "SophosXGFirewall"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-squidproxy",
+    "displayName": "SquidProxy",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-streamanalytics",
+    "displayName": "Azure Stream Analytics",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-symantecendpointprotection",
+    "displayName": "Symantec Endpoint Protection",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-symantecvip",
+    "displayName": "Symantec VIP",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-syslog",
+    "displayName": "Syslog",
+    "installedVersion": "2.0.3",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-sysmonforlinux",
+    "displayName": "Microsoft Sysmon For Linux",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-thehive",
+    "displayName": "TheHive",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-threatintelligence-taxii",
+    "displayName": "Threat Intelligence",
+    "installedVersion": "3.0.1",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-threatxwaf",
+    "displayName": "ThreatX WAF",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-trendmicroapexone",
+    "displayName": "Trend Micro Apex One",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-ubiquitiunifi",
+    "displayName": "Ubiquiti UniFi",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-uebaessentials",
+    "displayName": "UEBA Essentials",
+    "installedVersion": "3.0.0",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-unifiedmicrosoftsocforot",
+    "displayName": "Microsoft Defender for IoT",
+    "installedVersion": "2.0.2",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-urlhaus",
+    "displayName": "URLhaus",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-vcenter",
+    "displayName": "VMware vCenter",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-virustotal",
+    "displayName": "VirusTotal",
+    "installedVersion": "2.0.3",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-vmwarecarbonblack",
+    "displayName": "VMware Carbon Black Cloud",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-vmwareesxi",
+    "displayName": "VMware ESXi",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-watchlistsutilities",
+    "displayName": "Watchlists Utilities",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-websession-domain",
+    "displayName": "Web Session Essentials",
+    "installedVersion": "3.0.0",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-webshellsthreatprotection",
+    "displayName": "Web Shells Threat Protection",
+    "installedVersion": "3.0.1",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-windowsfirewall",
+    "displayName": "Windows Firewall",
+    "installedVersion": "3.0.0",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-windowsforwardedevents",
+    "displayName": "Windows Forwarded Events",
+    "installedVersion": "2.0.3",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-workplacefromfacebook",
+    "displayName": "Workplace from Facebook",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-zerotrust",
+    "displayName": "Zero Trust (TIC 3.0)",
+    "installedVersion": "3.0.0",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-zincopensource",
+    "displayName": "ZINC Open Source Threat Protection",
+    "installedVersion": "3.0.0",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-zoomreports",
+    "displayName": "Zoom Reports",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-zscalerprivateaccess",
+    "displayName": "Zscaler Private Access",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-symantec-proxysg",
+    "displayName": "Symantec ProxySG",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinel.symantec_icdx_mss",
+    "displayName": "Symantec Integrated Cyber Defense",
+    "installedVersion": null,
+    "authorName": "Symantec"
+  },
+  {
+    "contentId": "azuresentinel.trendmicrocas",
+    "displayName": "Trend Micro Cloud App Security",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "barracudanetworks.barracuda_waf_sentinel_solution",
+    "displayName": "Barracuda WAF Sentinel",
+    "installedVersion": null,
+    "authorName": "Barracuda"
+  },
+  {
+    "contentId": "bettermobilesecurityinc.better_mtd_mss",
+    "displayName": "BETTER Mobile Threat Defense (MTD)",
+    "installedVersion": null,
+    "authorName": "Better Mobile Security Inc"
+  },
+  {
+    "contentId": "bitsight_technologies_inc.bitsight_sentinel",
+    "displayName": "Bitsight",
+    "installedVersion": null,
+    "authorName": "Ariela Silberstein"
+  },
+  {
+    "contentId": "cert_orange_cyberdefense.microsoft-sentinel-solution-datalake2sentinel",
+    "displayName": "Datalake to Sentinel",
+    "installedVersion": null,
+    "authorName": "OrangeCyberdefense"
+  },
+  {
+    "contentId": "checkpoint.checkpoint-sentinel-solutions",
+    "displayName": "Check Point",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "cisco.cisco-catalyst-sdwan-sentinel",
+    "displayName": "Cisco Catalyst SD-WAN Sentinel Application",
+    "installedVersion": null,
+    "authorName": "Cisco Systems"
+  },
+  {
+    "contentId": "cisco.cisco-firepower-estreamer",
+    "displayName": "Cisco Firepower eStreamer",
+    "installedVersion": null,
+    "authorName": "Cisco"
+  },
+  {
+    "contentId": "citrix.citrix_analytics_for_security_mss",
+    "displayName": "Citrix Analytics Application",
+    "installedVersion": null,
+    "authorName": "Citrix Systems"
+  },
+  {
+    "contentId": "citrix.citrix_waf_mss",
+    "displayName": "Citrix WAF",
+    "installedVersion": null,
+    "authorName": "Citrix Systems"
+  },
+  {
+    "contentId": "cloudflare.cloudflare_sentinel",
+    "displayName": "Cloudflare",
+    "installedVersion": "3.0.1",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "cohesitydev1592001764720.cohesity_sentinel_data_connector",
+    "displayName": "Cohesity Security Integration",
+    "installedVersion": null,
+    "authorName": "Cohesity"
+  },
+  {
+    "contentId": "commvault.microsoft-sentinel-solution-commvaultsecurityiq",
+    "displayName": "Commvault Security IQ",
+    "installedVersion": null,
+    "authorName": "svc.cv-securityiq@commvault.com"
+  },
+  {
+    "contentId": "contrast_security.contrast_protect_azure_sentinel_solution",
+    "displayName": "Contrast Protect",
+    "installedVersion": null,
+    "authorName": "Contrast Security"
+  },
+  {
+    "contentId": "corelightinc1584998267292.corelight-for-azure-sentinel",
+    "displayName": "Corelight",
+    "installedVersion": null,
+    "authorName": "Corelight"
+  },
+  {
+    "contentId": "ctm360wll1698919697848.ctm360_microsoft_sentinel_solution",
+    "displayName": "CTM360",
+    "installedVersion": null,
+    "authorName": "CTM360"
+  },
+  {
+    "contentId": "cyberark.cyberark_epv_events_mss",
+    "displayName": "CyberArk Enterprise Password Vault (EPV)/Sentinel",
+    "installedVersion": null,
+    "authorName": "Cyberark"
+  },
+  {
+    "contentId": "cyberark.cybr_epm_sentinel",
+    "displayName": "CyberArk Endpoint Privilege Manager",
+    "installedVersion": null,
+    "authorName": "CyberArk Business Development"
+  },
+  {
+    "contentId": "cyberdefensegroupbv1625581149103.eset_inspect",
+    "displayName": "ESET Inspect integration",
+    "installedVersion": null,
+    "authorName": "ESET Netherlands"
+  },
+  {
+    "contentId": "cyberdefensegroupbv1625581149103.eset_protect",
+    "displayName": "ESET Protect integration",
+    "installedVersion": null,
+    "authorName": "ESET NL"
+  },
+  {
+    "contentId": "cyberpion1597832716616.cyberpion_mss",
+    "displayName": "Cyberpion Security Logs",
+    "installedVersion": null,
+    "authorName": "Cyberpion"
+  },
+  {
+    "contentId": "cybersixgill1657701397011.azure-sentinel-cybersixgill-actionable-alerts",
+    "displayName": "Cybersixgill Actionable Alerts",
+    "installedVersion": null,
+    "authorName": "Cybersixgill"
+  },
+  {
+    "contentId": "cyborgsecurityinc1689265652101.azure-sentinel-solution-cyborgsecurity-hunter",
+    "displayName": "Cyborg Security HUNTER Platform - Threat Hunting Packages",
+    "installedVersion": null,
+    "authorName": "Mike Mitchell"
+  },
+  {
+    "contentId": "cynerio1681887657820.cynerio-medical-device-security-sentinel-connector",
+    "displayName": "Cynerio Medical Device Security Sentinel Connector",
+    "installedVersion": null,
+    "authorName": "micha@cynerio.co"
+  },
+  {
+    "contentId": "darktrace1655286944672.darktrace_for_sentinel",
+    "displayName": "Darktrace",
+    "installedVersion": null,
+    "authorName": "Darktrace"
+  },
+  {
+    "contentId": "darktrace1655286944672.darktrace_mss",
+    "displayName": "AI Analyst Darktrace",
+    "installedVersion": null,
+    "authorName": "Darktrace"
+  },
+  {
+    "contentId": "dataminrinc1648845584891.dataminr_sentinel",
+    "displayName": "Dataminr Pulse",
+    "installedVersion": null,
+    "authorName": "Dataminr"
+  },
+  {
+    "contentId": "defendlimited1682894612656.cortex_xdr_connector",
+    "displayName": "Cortex XDR Data Connector",
+    "installedVersion": null,
+    "authorName": "DEFEND Ltd."
+  },
+  {
+    "contentId": "defendlimited1682894612656.microsoft-sentinel-solution-atlassian-beacon",
+    "displayName": "Atlassian Beacon",
+    "installedVersion": null,
+    "authorName": "DEFEND Ltd."
+  },
+  {
+    "contentId": "delineainc1653506022260.delinea_secret_server_mss",
+    "displayName": "Delinea Secret Server",
+    "installedVersion": null,
+    "authorName": "Delinea"
+  },
+  {
+    "contentId": "derdack.azure-sentinel-solution-signl4",
+    "displayName": "SIGNL4 – Mobile Alerting",
+    "installedVersion": null,
+    "authorName": "Ronald Czachara"
+  },
+  {
+    "contentId": "digitalshadows1662022995707.digitalshadows_searchlight_for_sentinel",
+    "displayName": "Digital Shadows SearchLight",
+    "installedVersion": null,
+    "authorName": "Digital Shadows"
+  },
+  {
+    "contentId": "domaintoolsllc1647901527537.domaintools-iris-investigate",
+    "displayName": "DomainTools Iris Investigate",
+    "installedVersion": null,
+    "authorName": "DomainTools"
+  },
+  {
+    "contentId": "dynatrace.dynatrace_azure_sentinel",
+    "displayName": "Dynatrace Software Intelligence Platform",
+    "installedVersion": null,
+    "authorName": "Dynatrace"
+  },
+  {
+    "contentId": "egress1589289169584.egress-sentinel-defend",
+    "displayName": "Egress Defend Connector",
+    "installedVersion": null,
+    "authorName": "Egress"
+  },
+  {
+    "contentId": "ermes.azure-sentinel-solution-ermes-browser-security",
+    "displayName": "Ermes Browser Security",
+    "installedVersion": null,
+    "authorName": "dev@ermes.company"
+  },
+  {
+    "contentId": "extrahop.extrahop_revealx_mss",
+    "displayName": "ExtraHop Reveal(x)",
+    "installedVersion": null,
+    "authorName": "ExtraHop"
+  },
+  {
+    "contentId": "f5-networks.f5_bigip_mss",
+    "displayName": "F5 Advanced WAF Integration via Telemetry Streaming",
+    "installedVersion": null,
+    "authorName": "F5 Networks"
+  },
+  {
+    "contentId": "f5-networks.f5_networks_data_mss",
+    "displayName": "F5 Advanced WAF Integration via Syslog/CEF",
+    "installedVersion": null,
+    "authorName": "F5"
+  },
+  {
+    "contentId": "falconforcebv1623147592118.falconfriday_content",
+    "displayName": "FalconForce FalconFriday Analytics",
+    "installedVersion": "2.0.0",
+    "authorName": "FalconForce"
+  },
+  {
+    "contentId": "feedlyinc1693853810319.azure-sentinel-solution-feedly",
+    "displayName": "Feedly",
+    "installedVersion": null,
+    "authorName": "Feedly ml@feedly.com"
+  },
+  {
+    "contentId": "flaresystmesinc1617114736428.flare-systems-firework-sentinel",
+    "displayName": "Flare",
+    "installedVersion": null,
+    "authorName": "Flare Integration Team"
+  },
+  {
+    "contentId": "forescout.azure-sentinel-solution-forescout",
+    "displayName": "Forescout eyeExtend",
+    "installedVersion": null,
+    "authorName": "Julian Wang"
+  },
+  {
+    "contentId": "gigamon-inc.microsoft-sentinel-solution-gigamon",
+    "displayName": "Gigamon Data Connector",
+    "installedVersion": null,
+    "authorName": "Gigamon"
+  },
+  {
+    "contentId": "greynoiseintelligenceinc1681236078693.microsoft-sentinel-byol-greynoise",
+    "displayName": "GreyNoise Enterprise",
+    "installedVersion": null,
+    "authorName": "JP Bourget jp@bluecycle.net"
+  },
+  {
+    "contentId": "holmsecurityswedenab1639511288603.holmsecurity_sc_sentinel",
+    "displayName": "Holm Security",
+    "installedVersion": null,
+    "authorName": "Holm Security"
+  },
+  {
+    "contentId": "hyas.a-hyas-insight-azure-sentinel-solutions-gallery",
+    "displayName": "HYAS Insight",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "iboss.iboss-sentinel-connector",
+    "displayName": "iboss Connector",
+    "installedVersion": null,
+    "authorName": "iboss"
+  },
+  {
+    "contentId": "illusivenetworks.illusive_platform_mss",
+    "displayName": "Illusive Attack Surface Analysis and Incident Logs",
+    "installedVersion": null,
+    "authorName": "Illusive Networks"
+  },
+  {
+    "contentId": "infoblox.infoblox-cdc-solution",
+    "displayName": "Infoblox Cloud",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "infosecglobal1632846037582.agilesec-analytics-connector",
+    "displayName": "AgileSec Analytics Connector",
+    "installedVersion": null,
+    "authorName": "InfoSecGlobal"
+  },
+  {
+    "contentId": "intel471inc1641226539011.intel471_threat_intelligence",
+    "displayName": "Intel 471 Threat Intelligence",
+    "installedVersion": null,
+    "authorName": "Intel 471 Inc."
+  },
+  {
+    "contentId": "ipqualityscorellc1632794263588.ipqs_1",
+    "displayName": "IPQualityScore Fraud & Risk Scoring",
+    "installedVersion": null,
+    "authorName": "IPQualityScore (IPQS)"
+  },
+  {
+    "contentId": "islandtechnologyinc1679434413850.island-sentinel-solution",
+    "displayName": "Island",
+    "installedVersion": null,
+    "authorName": "Island"
+  },
+  {
+    "contentId": "jamfsoftwareaustraliaptyltd1620360395539.jamf_protect",
+    "displayName": "Jamf Protect",
+    "installedVersion": null,
+    "authorName": "Thijs Xhaflaire"
+  },
+  {
+    "contentId": "almavivaspa1636563933762.joshua-cyberiskvision",
+    "displayName": "Joshua Cyberisk Vision",
+    "installedVersion": null,
+    "authorName": "Cyberiskvision"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-azuretraininglab",
+    "displayName": "Microsoft Sentinel Training Lab",
+    "installedVersion": "1.0.6",
+    "authorName": "Eli Forbes"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-dev0537detectionandhunting",
+    "displayName": "DEV-0537 Detection and Hunting",
+    "installedVersion": null,
+    "authorName": "Manish Kumar"
+  },
+  {
+    "contentId": "azuresentinel.azure-sentinel-solution-gcpauditlogs-api",
+    "displayName": "Google Cloud Platform Audit Logs",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "azuresentinelhoneytokens.azuresentinelhoneytokens",
+    "displayName": "Microsoft Sentinel Deception (Honey Tokens)",
+    "installedVersion": null,
+    "authorName": null
+  },
+  {
+    "contentId": "domaintoolsllc1647901527537.farsight-dnsdb",
+    "displayName": "Farsight DNSDB",
+    "installedVersion": null,
+    "authorName": "Nikhil Tripathi"
+  },
+  {
+    "contentId": "egress1589289169584.egress-sentinel-defend",
+    "displayName": "Egress Defend Connector",
+    "installedVersion": null,
+    "authorName": "Egress"
+  },
+  {
+    "contentId": "frieserschuckmann1683710561639.mkb_mdr_solution",
+    "displayName": "MKB+ MDR",
+    "installedVersion": null,
+    "authorName": null
+  },
+  {
+    "contentId": "gmm1695424160814.ama-workshop-01",
+    "displayName": "AMA Workshop 1",
+    "installedVersion": null,
+    "authorName": null
+  },
+  {
+    "contentId": "holmsecurityswedenab1639511288603.holmsecurity_sc_sentinel",
+    "displayName": "Holm Security",
+    "installedVersion": null,
+    "authorName": null
+  },
+  {
+    "contentId": "quest.oi-sod",
+    "displayName": "One Identity Safeguard On Demand",
+    "installedVersion": null,
+    "authorName": null
+  },
+  {
+    "contentId": "redcanary1586203186957.red-canary-azure-connector",
+    "displayName": "Red Canary Connector",
+    "installedVersion": null,
+    "authorName": "Red Canary"
+  },
+  {
+    "contentId": "sentinel4sap.sentinel4sap",
+    "displayName": "SAP applications",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "shadowbyte1641237427416.ariasent1",
+    "displayName": "Shadowbyte's Threat Intelligence",
+    "installedVersion": null,
+    "authorName": "Eli Forbes"
+  },
+  {
+    "contentId": "slashnext1598548183597.slashnext-weblog-assessment-for-microsoft-sentinel",
+    "displayName": "SlashNext URL Threat Analysis and IR",
+    "installedVersion": null,
+    "authorName": "SlashNext"
+  },
+  {
+    "contentId": "synackinc1654614310688.synack-sentinel-integration",
+    "displayName": "Synack Integration",
+    "installedVersion": null,
+    "authorName": null
+  },
+  {
+    "contentId": "lookoutinc.lookout_cloudsecurity_sentinel",
+    "displayName": "Lookout Cloud Security Platform",
+    "installedVersion": null,
+    "authorName": "Lookout"
+  },
+  {
+    "contentId": "lookoutinc.lookout_mtd_sentinel",
+    "displayName": "Lookout Mobile Threat Defense",
+    "installedVersion": null,
+    "authorName": "Lookout"
+  },
+  {
+    "contentId": "mailguardptylimited.microsoft-sentinel-solution-mailguard365",
+    "displayName": "MailGuard 365",
+    "installedVersion": null,
+    "authorName": "MailGuard"
+  },
+  {
+    "contentId": "microsoftcorporation1622712991604.sentinel4github",
+    "displayName": "Microsoft Sentinel - Continuous Threat Monitoring for GitHub",
+    "installedVersion": "3.0.2",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "microsoftsentinelcommunity.azure-sentinel-solution-barracudacloudgenfirewall",
+    "displayName": "Barracuda CloudGen Firewall",
+    "installedVersion": null,
+    "authorName": "Barracuda"
+  },
+  {
+    "contentId": "microsoftsentinelcommunity.azure-sentinel-solution-esionline",
+    "displayName": "Microsoft Exchange Security for Exchange Online",
+    "installedVersion": "3.0.2",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "microsoftsentinelcommunity.azure-sentinel-solution-exchangesecurityinsights",
+    "displayName": "Microsoft Exchange Security for Exchange On-Premises",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "microsoftsentinelcommunity.azure-sentinel-solution-forcepoint-casb",
+    "displayName": "Forcepoint CASB",
+    "installedVersion": null,
+    "authorName": "Forcepoint"
+  },
+  {
+    "contentId": "microsoftsentinelcommunity.azure-sentinel-solution-forcepoint-csg",
+    "displayName": "Forcepoint CSG",
+    "installedVersion": null,
+    "authorName": "Forcepoint"
+  },
+  {
+    "contentId": "microsoftsentinelcommunity.azure-sentinel-solution-forcepoint-dlp",
+    "displayName": "Forcepoint DLP",
+    "installedVersion": null,
+    "authorName": "Forcepoint"
+  },
+  {
+    "contentId": "microsoftsentinelcommunity.azure-sentinel-solution-forcepoint-ngfw",
+    "displayName": "Forcepoint NGFW",
+    "installedVersion": null,
+    "authorName": "Forcepoint"
+  },
+  {
+    "contentId": "microsoftsentinelcommunity.azure-sentinel-solution-kqltraining",
+    "displayName": "KQL Training",
+    "installedVersion": null,
+    "authorName": "Community"
+  },
+  {
+    "contentId": "microsoftsentinelcommunity.azure-sentinel-solution-misp2sentinel",
+    "displayName": "MISP2Sentinel",
+    "installedVersion": null,
+    "authorName": "MISP project & cudeso.be"
+  },
+  {
+    "contentId": "microsoftsentinelcommunity.azure-sentinel-solution-sochandbook",
+    "displayName": "SOC Handbook",
+    "installedVersion": null,
+    "authorName": "Community"
+  },
+  {
+    "contentId": "microsoftsentinelcommunity.azure-sentinel-solution-sqlserverdatabaseaudit",
+    "displayName": "Microsoft Windows SQL Server Database Audit",
+    "installedVersion": null,
+    "authorName": "Community"
+  },
+  {
+    "contentId": "mimecastnorthamerica1584469118674.azure-sentinel-solution-mimecastaudit",
+    "displayName": "Mimecast Audit Logs",
+    "installedVersion": null,
+    "authorName": "Mimecast"
+  },
+  {
+    "contentId": "mimecastnorthamerica1584469118674.azure-sentinel-solution-mimecastseg",
+    "displayName": "Mimecast Cloud Gateway MTA",
+    "installedVersion": null,
+    "authorName": "Mimecast"
+  },
+  {
+    "contentId": "mimecastnorthamerica1584469118674.azure-sentinel-solution-mimecasttiregional",
+    "displayName": "Mimecast Cloud Gateway Threat Intel Regional Feed",
+    "installedVersion": null,
+    "authorName": "Mimecast"
+  },
+  {
+    "contentId": "mimecastnorthamerica1584469118674.azure-sentinel-solution-mimecastttp",
+    "displayName": "Mimecast Cloud Gateway Targeted Threat Protection",
+    "installedVersion": null,
+    "authorName": "Mimecast"
+  },
+  {
+    "contentId": "morphisec.morphisec_utpp_mss",
+    "displayName": "Morphisec UTPP",
+    "installedVersion": null,
+    "authorName": "Morphisec"
+  },
+  {
+    "contentId": "nasunicorporation.nasuni-sentinel",
+    "displayName": "Nasuni",
+    "installedVersion": null,
+    "authorName": "Nasuni"
+  },
+  {
+    "contentId": "netskope.netskope_mss",
+    "displayName": "Netskope Data Connector",
+    "installedVersion": null,
+    "authorName": "Netskope"
+  },
+  {
+    "contentId": "nonamegate.nonamesecurity_sentinelsolution",
+    "displayName": "Noname Security",
+    "installedVersion": null,
+    "authorName": "Noname Security"
+  },
+  {
+    "contentId": "nucleuscyber.nc-protect-azure-sentinel-data-connector",
+    "displayName": "NC Protect Data Connector",
+    "installedVersion": null,
+    "authorName": "archTIS"
+  },
+  {
+    "contentId": "nxlogltd1589381969261.nxlog_aix_audit",
+    "displayName": "NXLog AIX Audit",
+    "installedVersion": null,
+    "authorName": "NXLog"
+  },
+  {
+    "contentId": "nxlogltd1589381969261.nxlog_bsm_macos_mss",
+    "displayName": "NXLog BSM macOS",
+    "installedVersion": null,
+    "authorName": "NXLog"
+  },
+  {
+    "contentId": "nxlogltd1589381969261.nxlog_dns_logs",
+    "displayName": "NXLog DNS Logs",
+    "installedVersion": null,
+    "authorName": "NXLog"
+  },
+  {
+    "contentId": "nxlogltd1589381969261.nxlog_fim",
+    "displayName": "NXLog FIM for Microsoft Azure Sentinel",
+    "installedVersion": null,
+    "authorName": "NXLog"
+  },
+  {
+    "contentId": "nxlogltd1589381969261.nxlog_linuxaudit_mss",
+    "displayName": "NXLog LinuxAudit",
+    "installedVersion": null,
+    "authorName": "NXLog"
+  },
+  {
+    "contentId": "orcasecurityinc1621870991703.orca_security_alerts_mss",
+    "displayName": "Orca Security Alerts",
+    "installedVersion": null,
+    "authorName": "Orca Security"
+  },
+  {
+    "contentId": "perimeter811605117499319.perimeter_81___mss",
+    "displayName": "Perimeter 81",
+    "installedVersion": null,
+    "authorName": "Perimeter 81"
+  },
+  {
+    "contentId": "prancerenterprise1600813133757.microsoft-sentinel-solution-prancer",
+    "displayName": "Prancer PenSuite AI",
+    "installedVersion": null,
+    "authorName": "Prancer"
+  },
+  {
+    "contentId": "rbei.bgsw_aishield_sentinel",
+    "displayName": "AIShield - AI Security Monitoring",
+    "installedVersion": null,
+    "authorName": "AIShield"
+  },
+  {
+    "contentId": "recordedfuture1605638642586.recorded_future_sentinel_solution",
+    "displayName": "Recorded Future Intelligence",
+    "installedVersion": "3.0.2",
+    "authorName": "Recorded Future Premier Integrations"
+  },
+  {
+    "contentId": "reversinglabs1597673283347.rl_offer_content_hub_aoae",
+    "displayName": "ReversingLabs Content Pack",
+    "installedVersion": null,
+    "authorName": "ReversingLabs"
+  },
+  {
+    "contentId": "ridgesecuritytechnologyinc1670890478389.microsoft-sentinel-solution-ridgesecurity",
+    "displayName": "Ridge Security RidgeBot",
+    "installedVersion": null,
+    "authorName": "RidgeSecurity"
+  },
+  {
+    "contentId": "rubrik_inc.rubrik_sentinel",
+    "displayName": "Rubrik Integration with Sentinel for Ransomware Protection",
+    "installedVersion": null,
+    "authorName": "Ben Meadowcroft"
+  },
+  {
+    "contentId": "sailpoint1582673310610.sentinel_offering",
+    "displayName": "SailPoint",
+    "installedVersion": null,
+    "authorName": "SailPointIdentityNow"
+  },
+  {
+    "contentId": "securepracticeas1650887373770.microsoft-sentinel-solution-mailrisk",
+    "displayName": "MailRisk data connector",
+    "installedVersion": null,
+    "authorName": "Secure Practice"
+  },
+  {
+    "contentId": "securitybridge1647511278080.securitybridge-sentinel-app-1",
+    "displayName": "SecurityBridge App",
+    "installedVersion": null,
+    "authorName": "Christoph Nagy"
+  },
+  {
+    "contentId": "securityscorecardinc1667844176331.ssc-rating-sentinel",
+    "displayName": "SecurityScorecard Ratings",
+    "installedVersion": null,
+    "authorName": "SecurityScorecard"
+  },
+  {
+    "contentId": "semperis.semperisdsp",
+    "displayName": "Semperis Directory Services Protector",
+    "installedVersion": null,
+    "authorName": "Semperis"
+  },
+  {
+    "contentId": "senservallc.senservapro4sentinel",
+    "displayName": "Senserva Offer",
+    "installedVersion": null,
+    "authorName": "Senserva"
+  },
+  {
+    "contentId": "sentinel4azurefirewall.sentinel4azurefirewall",
+    "displayName": "Azure Firewall",
+    "installedVersion": "3.0.1",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "sentinel4dynamics365.d365_finance_and_operations",
+    "displayName": "Dynamics 365 Finance and Operations",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "sentinel4dynamics365.dynamics365connector",
+    "displayName": "Dynamics 365 - Connector Only",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "sentinel4dynamics365.powerplatform",
+    "displayName": "Microsoft Power Platform",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "sentinel4dynamics365.sentinel4dynamics365",
+    "displayName": "Dynamics 365 CE Apps",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "sentinel4sap.sap_btp_sentinel_solution",
+    "displayName": "SAP BTP",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "sentinel4sql.sentinel4sql",
+    "displayName": "Azure SQL Database",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "sentinel4teams.sentinelforteams",
+    "displayName": "Teams",
+    "installedVersion": "3.0.0",
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "seraphicalgorithmsltd1616061090462.seraphic-security-sentinel",
+    "displayName": "Seraphic Security connector integration package",
+    "installedVersion": null,
+    "authorName": "Seraphic Security"
+  },
+  {
+    "contentId": "shieldox.cognni_for_microsoft_sentinel",
+    "displayName": "Cognni",
+    "installedVersion": null,
+    "authorName": "Cognni"
+  },
+  {
+    "contentId": "sonicwall-inc.sonicwall-networksecurity-azure-sentinal",
+    "displayName": "SonicWall Network Security",
+    "installedVersion": null,
+    "authorName": "SonicWall"
+  },
+  {
+    "contentId": "sonraisecurityllc1584373214489.sonrai_sentinel_offer",
+    "displayName": "Sonrai Security",
+    "installedVersion": null,
+    "authorName": "Sonrai support@sonraisecurity.com"
+  },
+  {
+    "contentId": "sophos.sophos_cloud_optix_mss",
+    "displayName": "Sophos Cloud Optix",
+    "installedVersion": null,
+    "authorName": "Sophos"
+  },
+  {
+    "contentId": "spycloudinc1680448518850.azure-sentinel-solution-spycloudenterprise",
+    "displayName": "SpyCloud Enterprise Protection",
+    "installedVersion": "3.0.0",
+    "authorName": "SpyCloud"
+  },
+  {
+    "contentId": "squadratechnologies.secrmmsentinel",
+    "displayName": "Squadra Technologies secRMM",
+    "installedVersion": null,
+    "authorName": "Squadra Technologies"
+  },
+  {
+    "contentId": "taloncybersecurityltd1654088115170.talonconnector",
+    "displayName": "Talon Connector",
+    "installedVersion": null,
+    "authorName": "Talon"
+  },
+  {
+    "contentId": "taniuminc1646329360287.tanium_sentinel_connector",
+    "displayName": "Tanium Microsoft Sentinel Connector",
+    "installedVersion": "2.0.1",
+    "authorName": "Tanium"
+  },
+  {
+    "contentId": "tenable.tenable-sentinel-integration",
+    "displayName": "Tenable App",
+    "installedVersion": null,
+    "authorName": "Tenable"
+  },
+  {
+    "contentId": "thecollectiveconsultingbv1584980370320.lastpass-enterprise-monitoring-solution",
+    "displayName": "Lastpass Enterprise Activity Monitoring",
+    "installedVersion": null,
+    "authorName": "Thijs Lecomte"
+  },
+  {
+    "contentId": "theominc1667512729960.theom_sentinel",
+    "displayName": "Theom  - Data Cloud and Data Lakehouse Attack Detection",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "threatconnectinc1694630408738.sentinel-threatconnect-byol-enterprise",
+    "displayName": "ThreatConnect",
+    "installedVersion": "3.0.0",
+    "authorName": "JP Bourget jp@bluecycle.net"
+  },
+  {
+    "contentId": "trendmicro.trend_micro_deep_security_mss",
+    "displayName": "Trend Micro Deep Security",
+    "installedVersion": null,
+    "authorName": "Trend Micro"
+  },
+  {
+    "contentId": "trendmicro.trend_micro_tippingpoint_mss",
+    "displayName": "Trend Micro TippingPoint",
+    "installedVersion": null,
+    "authorName": "Trend Micro"
+  },
+  {
+    "contentId": "trendmicro.trend_micro_vision_one_xdr_mss",
+    "displayName": "Trend Vision One",
+    "installedVersion": null,
+    "authorName": "Trend Micro"
+  },
+  {
+    "contentId": "valencesecurityinc1673598943514.valence_sentinel_solution",
+    "displayName": "Valence Security",
+    "installedVersion": null,
+    "authorName": "Valence Security"
+  },
+  {
+    "contentId": "varmournetworks.varmour_sentinel",
+    "displayName": "vArmour Application Controller",
+    "installedVersion": null,
+    "authorName": "vArmour"
+  },
+  {
+    "contentId": "vectraaiinc.ai_vectra_detect_mss",
+    "displayName": "Vectra Detect",
+    "installedVersion": null,
+    "authorName": "Vectra TME"
+  },
+  {
+    "contentId": "vectraaiinc.vectra-xdr-for-microsoft-sentinel",
+    "displayName": "Vectra XDR",
+    "installedVersion": null,
+    "authorName": "TME"
+  },
+  {
+    "contentId": "vectraaiinc.vectra_sentinel_solution",
+    "displayName": "Vectra AI Stream",
+    "installedVersion": null,
+    "authorName": "Microsoft"
+  },
+  {
+    "contentId": "watchguard-technologies.watchguard_firebox_mss",
+    "displayName": "WatchGuard Firebox",
+    "installedVersion": null,
+    "authorName": "WatchGuard"
+  },
+  {
+    "contentId": "wirexsystems1584682625009.wirex_network_forensics_platform_mss",
+    "displayName": "WireX Network Forensics Platform",
+    "installedVersion": null,
+    "authorName": "WireX Systems"
+  },
+  {
+    "contentId": "withsecurecorporation.sentinel-solution-withsecure-via-connector",
+    "displayName": "WithSecure™ Elements via Connector",
+    "installedVersion": null,
+    "authorName": "WithSecure"
+  },
+  {
+    "contentId": "wizinc1627338511749.wizinc1627338511749_wiz_mss-sentinel",
+    "displayName": "Wiz",
+    "installedVersion": null,
+    "authorName": "Wiz"
+  },
+  {
+    "contentId": "zeronetworksltd1629013803351.azure-sentinel-solution-znsegmentaudit",
+    "displayName": "Zero Networks Segment",
+    "installedVersion": null,
+    "authorName": "Nicholas DiCola"
+  },
+  {
+    "contentId": "zimperiuminc.zimperium_mobile_threat_defense_mss",
+    "displayName": "Zimperium MTD",
+    "installedVersion": null,
+    "authorName": "Zimperium"
+  },
+  {
+    "contentId": "zscaler1579058425289.zscaler_internet_access_mss",
+    "displayName": "Zscaler Internet Access",
+    "installedVersion": null,
+    "authorName": "Zscaler"
+  },
+  {
+    "contentId": "009b9bae-23dd-43c4-bcb9-11c4ba7c784a",
+    "displayName": "End-user consent stopped due to risk-based consent",
+    "installedVersion": "1.0.1",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "00cb180c-08a8-4e55-a276-63fb1442d5b5",
+    "displayName": "Midnight Blizzard - Script payload stored in Registry",
+    "installedVersion": "1.1.3",
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "017e095a-94d8-430c-a047-e51a11fb737b",
+    "displayName": "URL Added to Application from Unknown Domain",
+    "installedVersion": "1.0.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "01e8ffff-dc0c-43fe-aa22-d459c4204553",
+    "displayName": "Discord CDN Risky File Download  (ASIM Web Session Schema)",
+    "installedVersion": "1.1.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "02f6c2e5-219d-4426-a0bf-ad67abc63d53",
+    "displayName": "COM Event System Loading New DLL",
+    "installedVersion": "1.0.2",
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "03e04c97-8cae-48b3-9d2f-4ab262e4ffff",
+    "displayName": "Silk Typhoon Suspicious File Downloads.",
+    "installedVersion": "1.0.2",
+    "authorName": "petebryan"
+  },
+  {
+    "contentId": "042f2801-a375-4cfd-bd29-041fc7ed88a0",
+    "displayName": "Risky user signin observed in non-Microsoft network device",
+    "installedVersion": "1.0.3",
+    "authorName": "Arjun Trivedi"
+  },
+  {
+    "contentId": "0625fcce-6d52-491e-8c68-1d9b801d25b9",
+    "displayName": "Silk Typhoon Suspicious UM Service Error",
+    "installedVersion": "1.0.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "06a9b845-6a95-4432-a78b-83919b28c375",
+    "displayName": "Time series anomaly detection for total volume of traffic",
+    "installedVersion": "1.0.2",
+    "authorName": "Ashwin Patil"
+  },
+  {
+    "contentId": "06bbf969-fcbe-43fa-bac2-b2fa131d113a",
+    "displayName": "Microsoft Entra ID Health Service Agents Registry Keys Access",
+    "installedVersion": "1.1.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "074ce265-f684-41cd-af07-613c5f3e6d0d",
+    "displayName": "Known Forest Blizzard group domains - July 2019",
+    "installedVersion": "1.5.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "0777f138-e5d8-4eab-bec1-e11ddfbc2be2",
+    "displayName": "Failed logon attempts by valid accounts within 10 mins",
+    "installedVersion": "1.2.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "09c49590-4e9d-4da9-a34d-17222d0c9e7e",
+    "displayName": "A client made a web request to a potentially harmful file (ASIM Web Session schema)",
+    "installedVersion": "1.1.2",
+    "authorName": "Yaron"
+  },
+  {
+    "contentId": "09ec8fa2-b25f-4696-bfae-05a7b85d7b9e",
+    "displayName": "User login from different countries within 3 hours (Uses Authentication Normalization)",
+    "installedVersion": "1.2.3",
+    "authorName": "Ofer Shezaf"
+  },
+  {
+    "contentId": "0a3f4f4f-46ad-4562-acd6-f17730a5aef4",
+    "displayName": "Unusual identity creation using exchange powershell",
+    "installedVersion": "1.0.1",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "0b9ae89d-8cad-461c-808f-0494f70ad5c4",
+    "displayName": "Multiple Password Reset by user",
+    "installedVersion": "2.1.4",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "0bd65651-1404-438b-8f63-eecddcec87b4",
+    "displayName": "Gain Code Execution on ADFS Server via Remote WMI Execution",
+    "installedVersion": "1.1.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "0dd2a343-4bf9-4c93-a547-adf3658ddaec",
+    "displayName": "New EXE deployed via Default Domain or Default Domain Controller Policies (ASIM Version)",
+    "installedVersion": "1.0.3",
+    "authorName": "Microsoft Security Community"
+  },
+  {
+    "contentId": "0ed0fe7c-af29-4990-af7f-bb5ccb231198",
+    "displayName": "Changes to PIM Settings",
+    "installedVersion": "1.0.1",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "11b4c19d-2a79-4da3-af38-b067e1273dee",
+    "displayName": "Solorigate Named Pipe",
+    "installedVersion": "1.2.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "11bda520-a965-4654-9a45-d09f372f71aa",
+    "displayName": "Azure VM Run Command operation executed during suspicious login window",
+    "installedVersion": "1.0.8",
+    "authorName": "Microsoft Security Rearch"
+  },
+  {
+    "contentId": "1218175f-c534-421c-8070-5dcaabf28067",
+    "displayName": "Suspicious link sharing pattern",
+    "installedVersion": "1.0.2",
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "1399664f-9434-497c-9cde-42e4d74ae20e",
+    "displayName": "Detecting Impossible travel with mailbox permission tampering & Privilege Escalation attempt",
+    "installedVersion": "1.0.1",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "1572e66b-20a7-4012-9ec4-77ec4b101bc8",
+    "displayName": "Potential Kerberoasting",
+    "installedVersion": "1.1.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "157c0cfc-d76d-463b-8755-c781608cdc1a",
+    "displayName": "Cisco - firewall block but success logon to Microsoft Entra ID",
+    "installedVersion": "1.0.3",
+    "authorName": "Microsoft Security Resarch"
+  },
+  {
+    "contentId": "186970ee-5001-41c1-8c73-3178f75ce96a",
+    "displayName": "AV detections related to Europium actors",
+    "installedVersion": "1.0.1",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "18e6a87e-9d06-4a4e-8b59-3469cd49552d",
+    "displayName": "ADFS DKM Master Key Export",
+    "installedVersion": "1.1.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "19e01883-15d8-4eb6-a7a5-3276cd668388",
+    "displayName": "High count of failed attempts from same client IP",
+    "installedVersion": "1.0.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "1baaaf00-655f-4de9-8ff8-312e902cda71",
+    "displayName": "Service Principal Authentication Attempt from New Country",
+    "installedVersion": "1.0.1",
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "1ce5e766-26ab-4616-b7c8-3b33ae321e80",
+    "displayName": "Failed host logons but success logon to AzureAD",
+    "installedVersion": "1.1.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "1f3b4dfd-21ff-4ed3-8e27-afc219e05c50",
+    "displayName": "Detect PIM Alert Disabling activity",
+    "installedVersion": "1.0.1",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "2149d9bb-8298-444c-8f99-f7bf0274dd05",
+    "displayName": "Star Blizzard C2 Domains August 2022",
+    "installedVersion": "1.0.2",
+    "authorName": "Ajeet Prakash"
+  },
+  {
+    "contentId": "22a320c2-e1e5-4c74-a35b-39fc9cdcf859",
+    "displayName": "Suspicious linking of existing user to external User",
+    "installedVersion": "1.0.1",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "23005e87-2d3a-482b-b03d-edbebd1ae151",
+    "displayName": "Silk Typhoon Suspicious Exchange Request",
+    "installedVersion": "1.0.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "25a7f951-54b7-4cf5-9862-ebc04306c590",
+    "displayName": "Conditional Access Policy Modified by New User",
+    "installedVersion": "1.0.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "2790795b-7dba-483e-853f-44aa0bc9c985",
+    "displayName": "Wazuh - Large Number of Web errors from an IP",
+    "installedVersion": "1.0.2",
+    "authorName": "Jordan Ross"
+  },
+  {
+    "contentId": "2937bc6b-7cda-4fba-b452-ea43ba8e835f",
+    "displayName": "Possible Resource-Based Constrained Delegation Abuse",
+    "installedVersion": "1.0.1",
+    "authorName": "Vasileios Paschalidis"
+  },
+  {
+    "contentId": "29a29e5d-354e-4f5e-8321-8b39d25047bf",
+    "displayName": "Dev-0228 File Path Hashes November 2021 (ASIM Version)",
+    "installedVersion": "1.2.0",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "2b701288-b428-4fb8-805e-e4372c574786",
+    "displayName": "Anomalous login followed by Teams action",
+    "installedVersion": "1.0.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "2c701f94-783c-4cd4-bc9b-3b3334976090",
+    "displayName": "Exchange Worker Process Making Remote Call",
+    "installedVersion": "1.0.1",
+    "authorName": "Microsoft Security Community"
+  },
+  {
+    "contentId": "2cd8b3d5-c9e0-4be3-80f7-0469d511c3f6",
+    "displayName": "Suspicious Sign In by Entra ID Connect Sync Account",
+    "installedVersion": "1.0.1",
+    "authorName": "Microsoft Security Community"
+  },
+  {
+    "contentId": "2f561e20-d97b-4b13-b02d-18b34af6e87c",
+    "displayName": "Email access via active sync",
+    "installedVersion": "1.1.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "2fed0668-6d43-4c78-87e6-510f96f12145",
+    "displayName": "Phishing link click observed in Network Traffic",
+    "installedVersion": "1.0.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "30c8b802-ace1-4408-bc29-4c5c5afb49e1",
+    "displayName": "Sdelete deployed via GPO and run recursively (ASIM Version)",
+    "installedVersion": "1.0.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "3255ec41-6bd6-4f35-84b1-c032b18bbfcb",
+    "displayName": "Fortinet - Beacon pattern detected",
+    "installedVersion": "1.0.3",
+    "authorName": "robMSFT"
+  },
+  {
+    "contentId": "3b443f22-9be9-4c35-ac70-a94757748439",
+    "displayName": "Dev-0228 File Path Hashes November 2021",
+    "installedVersion": "1.0.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "3cc5ccd8-b416-4141-bb2d-4eba370e37a5",
+    "displayName": "OMI Vulnerability Exploitation",
+    "installedVersion": "1.1.3",
+    "authorName": "Ron Marsiano"
+  },
+  {
+    "contentId": "3d023f64-8225-41a2-9570-2bd7c2c4535e",
+    "displayName": "User account enabled and disabled within 10 mins",
+    "installedVersion": "1.1.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "3f0c20d5-6228-48ef-92f3-9ff7822c1954",
+    "displayName": "A host is potentially running a hacking tool (ASIM Web Session schema)",
+    "installedVersion": "1.1.1",
+    "authorName": "Yaron"
+  },
+  {
+    "contentId": "3fe3c520-04f1-44b8-8398-782ed21435f8",
+    "displayName": "DNS events related to ToR proxies  (ASIM DNS Schema)",
+    "installedVersion": "1.3.2",
+    "authorName": "Yaron Fruchtmann"
+  },
+  {
+    "contentId": "42436753-9944-4d70-801c-daaa4d19ddd2",
+    "displayName": "A host is potentially running PowerShell to send HTTP(S) requests (ASIM Web Session schema)",
+    "installedVersion": "1.1.1",
+    "authorName": "Yaron"
+  },
+  {
+    "contentId": "44a555d8-ecee-4a25-95ce-055879b4b14b",
+    "displayName": "High count of connections by client IP on many ports",
+    "installedVersion": "1.0.2",
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "45076281-35ae-45e0-b443-c32aa0baf965",
+    "displayName": "Probable AdFind Recon Tool Usage (Normalized Process Events)",
+    "installedVersion": "1.1.3",
+    "authorName": "Yuval Naor"
+  },
+  {
+    "contentId": "45b903c5-6f56-4969-af10-ae62ac709718",
+    "displayName": "Rare RDP Connections",
+    "installedVersion": "1.2.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "473d57e6-f787-435c-a16b-b38b51fa9a4b",
+    "displayName": "Security Service Registry ACL Modification",
+    "installedVersion": "1.1.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "48602a24-67cf-4362-b258-3f4249e55def",
+    "displayName": "Suspicious modification of Global Administrator user properties",
+    "installedVersion": "1.0.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "492fbe35-cbac-4a8c-9059-826782e6915a",
+    "displayName": "Changes to Application Logout URL",
+    "installedVersion": "1.0.1",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "4a3073ac-7383-48a9-90a8-eb6716183a54",
+    "displayName": "SUNBURST suspicious SolarWinds child processes",
+    "installedVersion": "1.0.4",
+    "authorName": "pemontto"
+  },
+  {
+    "contentId": "4acd3a04-2fad-4efc-8a4b-51476594cec4",
+    "displayName": "Possible contact with a domain generated by a DGA",
+    "installedVersion": "1.0.2",
+    "authorName": "robMSFT"
+  },
+  {
+    "contentId": "4b93c5af-d20b-4236-b696-a28b8c51407f",
+    "displayName": "User account created and deleted within 10 mins",
+    "installedVersion": "1.1.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "4d94d4a9-dc96-450a-9dea-4d4d4594199b",
+    "displayName": "Vulnerable Machines related to OMIGOD CVE-2021-38647",
+    "installedVersion": "1.0.3",
+    "authorName": "Ajeet Prakash"
+  },
+  {
+    "contentId": "4e5914a4-2ccd-429d-a845-fa597f0bd8c5",
+    "displayName": "AV detections related to Hive Ransomware",
+    "installedVersion": "1.0.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "5239248b-abfb-4c6a-8177-b104ade5db56",
+    "displayName": "Azure VM Run Command operations executing a unique PowerShell script",
+    "installedVersion": "1.0.5",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "52aec824-96c1-4a03-8e44-bb70532e6cea",
+    "displayName": "AdminSDHolder Modifications",
+    "installedVersion": "1.0.2",
+    "authorName": "Vasileios Paschalidis"
+  },
+  {
+    "contentId": "55073036-bb86-47d3-a85a-b113ac3d9396",
+    "displayName": "Privileged User Logon from new ASN",
+    "installedVersion": "1.0.5",
+    "authorName": "petebryan"
+  },
+  {
+    "contentId": "572e75ef-5147-49d9-9d65-13f2ed1e3a86",
+    "displayName": "Guest Users Invited to Tenant by New Inviters",
+    "installedVersion": "1.0.1",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "58fc0170-0877-4ea8-a9ff-d805e361cfae",
+    "displayName": "User joining Zoom meeting from suspicious timezone",
+    "installedVersion": "1.0.3",
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "5b6ae038-f66e-4f74-9315-df52fd492be4",
+    "displayName": "Potential re-named sdelete usage (ASIM Version)",
+    "installedVersion": "1.0.4",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "5ef06767-b37c-4818-b035-47de950d0046",
+    "displayName": "Potential Build Process Compromise",
+    "installedVersion": "1.1.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "5f171045-88ab-4634-baae-a7b6509f483b",
+    "displayName": "AV detections related to Dev-0530 actors",
+    "installedVersion": "1.0.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "61988db3-0565-49b5-b8e3-747195baac6e",
+    "displayName": "Malware in the recycle bin (Normalized Process Events)",
+    "installedVersion": "1.2.3",
+    "authorName": "Yuval Naor"
+  },
+  {
+    "contentId": "6267ce44-1e9d-471b-9f1e-ae76a6b7aa84",
+    "displayName": "Mass Download & copy to USB device by single user",
+    "installedVersion": "1.0.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "631d02df-ab51-46c1-8d72-32d0cfec0720",
+    "displayName": "SUNBURST suspicious SolarWinds child processes (Normalized Process Events)",
+    "installedVersion": "1.1.3",
+    "authorName": "Yuval Naor"
+  },
+  {
+    "contentId": "643c2025-9604-47c5-833f-7b4b9378a1f5",
+    "displayName": "Failed AzureAD logons but success logon to AWS Console",
+    "installedVersion": "1.0.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "66276b14-32c5-4226-88e3-080dacc31ce1",
+    "displayName": "Audit policy manipulation using auditpol utility",
+    "installedVersion": "1.0.1",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "68c0b6bb-6bd9-4ef4-9011-08998c8ef90f",
+    "displayName": "Application Gateway WAF - SQLi Detection",
+    "installedVersion": "1.0.1",
+    "authorName": "shabaz-github"
+  },
+  {
+    "contentId": "69a45b05-71f5-45ca-8944-2e038747fb39",
+    "displayName": "RDP Nesting",
+    "installedVersion": "1.2.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "6a2e2ff4-5568-475e-bef2-b95f12b9367b",
+    "displayName": "Potential Password Spray Attack (Uses Authentication Normalization)",
+    "installedVersion": "1.1.2",
+    "authorName": "Ofer Shezaf"
+  },
+  {
+    "contentId": "6c360107-f3ee-4b91-9f43-f4cfd90441cf",
+    "displayName": "AD account with Don't Expire Password",
+    "installedVersion": "1.1.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "6e715730-82c0-496c-983b-7a20c4590bd9",
+    "displayName": "Windows host username encoded in base64 web request",
+    "installedVersion": "1.0.1",
+    "authorName": "Thomas McElroy"
+  },
+  {
+    "contentId": "6e95aef3-a1e0-4063-8e74-cd59aa59f245",
+    "displayName": "Azure Diagnostic settings removed from a resource",
+    "installedVersion": "1.0.2",
+    "authorName": "KennethMLdk"
+  },
+  {
+    "contentId": "779731f7-8ba0-4198-8524-5701b7defddc",
+    "displayName": "M365D Alerts Correlation to non-Microsoft Network device network activity involved in successful sign-in Activity",
+    "installedVersion": "1.0.3",
+    "authorName": "Arjun Trivedi"
+  },
+  {
+    "contentId": "7808c05a-3afd-4d13-998a-a59e2297693f",
+    "displayName": "New country signIn with correct password",
+    "installedVersion": "1.0.1",
+    "authorName": "Juanse"
+  },
+  {
+    "contentId": "78422ef2-62bf-48ca-9bab-72c69818a425",
+    "displayName": "Multiple RDP connections from Single System",
+    "installedVersion": "1.2.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "7efc75ce-e2a4-400f-a8b1-283d3b0f2c60",
+    "displayName": "Account added and removed from privileged groups",
+    "installedVersion": "1.1.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "84cccc86-5c11-4b3a-aca6-7c8f738ed0f7",
+    "displayName": "Service Principal Assigned Privileged Role",
+    "installedVersion": "1.0.1",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "84cf1d59-f620-4fee-b569-68daf7008b7b",
+    "displayName": "New High Severity Vulnerability Detected Across Multiple Hosts",
+    "installedVersion": "1.0.2",
+    "authorName": "chicduong"
+  },
+  {
+    "contentId": "875d0eb1-883a-4191-bd0e-dbfdeb95a464",
+    "displayName": "Service Principal Name (SPN) Assigned to User Account",
+    "installedVersion": "1.0.2",
+    "authorName": "Vasileios Paschalidis"
+  },
+  {
+    "contentId": "884c4957-70ea-4f57-80b9-1bca3890315b",
+    "displayName": "High count of failed logons by a user",
+    "installedVersion": "1.0.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "8955c0fb-3408-47b0-a3b9-a1faec41e427",
+    "displayName": "Exchange Server Suspicious File Downloads.",
+    "installedVersion": "1.0.1",
+    "authorName": "petebryan"
+  },
+  {
+    "contentId": "8cbc3215-fa58-4bd6-aaaa-f0029c351730",
+    "displayName": "A host is potentially running a crypto miner (ASIM Web Session schema)",
+    "installedVersion": "1.1.1",
+    "authorName": "Yaron"
+  },
+  {
+    "contentId": "8dcf7238-a7d0-4cfd-8d0c-b230e3cd9182",
+    "displayName": "Trust Monitor Event",
+    "installedVersion": "1.0.2",
+    "authorName": "SecurityJedi"
+  },
+  {
+    "contentId": "8e267e91-6bda-4b3c-bf68-9f5cbdd103a3",
+    "displayName": "External User Access Enabled",
+    "installedVersion": "1.0.3",
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "8ee967a2-a645-4832-85f4-72b635bcb3a6",
+    "displayName": "Failed AzureAD logons but success logon to host",
+    "installedVersion": "1.1.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "910124df-913c-47e3-a7cd-29e1643fa55e",
+    "displayName": "Failed AWS Console logons but success logon to AzureAD",
+    "installedVersion": "1.0.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "9176b18f-a946-42c6-a2f6-0f6d17cd6a8a",
+    "displayName": "Potential communication with a Domain Generation Algorithm (DGA) based hostname (ASIM Web Session schema)",
+    "installedVersion": "1.1.3",
+    "authorName": "Yaron"
+  },
+  {
+    "contentId": "95002681-4ecb-4da3-9ece-26d7e5feaa33",
+    "displayName": "Sign-ins from IPs that attempt sign-ins to disabled accounts (Uses Authentication Normalization)",
+    "installedVersion": "1.0.2",
+    "authorName": "Community"
+  },
+  {
+    "contentId": "95a15f39-d9cc-4667-8cdd-58f3113691c9",
+    "displayName": "Silk Typhoon New UM Service Child Process",
+    "installedVersion": "1.1.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "968358d6-6af8-49bb-aaa4-187b3067fb95",
+    "displayName": "Exchange SSRF Autodiscover ProxyShell - Detection",
+    "installedVersion": "1.0.1",
+    "authorName": "Thomas McElroy"
+  },
+  {
+    "contentId": "979c42dd-533e-4ede-b18b-31a84ba8b3d6",
+    "displayName": "DSRM Account Abuse",
+    "installedVersion": "1.0.1",
+    "authorName": "Vasileios Paschalidis"
+  },
+  {
+    "contentId": "983a6922-894d-413c-9f04-d7add0ecc307",
+    "displayName": "Potential DGA detected (ASIM DNS Schema)",
+    "installedVersion": "1.3.2",
+    "authorName": "Yaron"
+  },
+  {
+    "contentId": "99d589fa-7337-40d7-91a0-c96d0c4fa437",
+    "displayName": "Account created from non-approved sources",
+    "installedVersion": "1.0.1",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "9adbd1c3-a4be-44ef-ac2f-503fd25692ee",
+    "displayName": "High risk Office operation conducted by IP Address that recently attempted to log into a disabled account",
+    "installedVersion": "1.0.0",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "9c1e9381-79dd-4ddf-9570-b73a1dc59fe0",
+    "displayName": "Anomaly Sign In Event from an IP",
+    "installedVersion": "1.0.1",
+    "authorName": "Juanse"
+  },
+  {
+    "contentId": "9d0295ee-cb75-4f2c-9952-e5acfbb67036",
+    "displayName": "AppServices AV Scan with Infected Files",
+    "installedVersion": "1.0.2",
+    "authorName": "SecurityJedi"
+  },
+  {
+    "contentId": "9d8b5a18-b7db-4c23-84a6-95febaf7e1e4",
+    "displayName": "Europium - Hash and IP IOCs - September 2022",
+    "installedVersion": "1.0.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "9fb2ee72-959f-4c2b-bc38-483affc539e4",
+    "displayName": "Application ID URI Changed",
+    "installedVersion": "1.0.1",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "a09a0b8e-30fe-4ebf-94a0-cffe50f579cd",
+    "displayName": "User State changed from Guest to Member",
+    "installedVersion": "1.0.1",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "a1080fc1-13d1-479b-8340-255f0290d96c",
+    "displayName": "Application Redirect URL Update",
+    "installedVersion": "1.0.1",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "a1bddaf8-982b-4089-ba9e-6590dfcf80ea",
+    "displayName": "Excessive number of HTTP authentication failures from a source (ASIM Web Session schema)",
+    "installedVersion": "1.0.4",
+    "authorName": "Yaron"
+  },
+  {
+    "contentId": "a333d8bf-22a3-4c55-a1e9-5f0a135c0253",
+    "displayName": "Microsoft Defender for Endpoint (MDE) signatures for Azure Synapse pipelines and Azure Data Factory",
+    "installedVersion": "1.0.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "a357535e-f722-4afe-b375-cff362b2b376",
+    "displayName": "Malformed user agent",
+    "installedVersion": "1.0.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "a35f2c18-1b97-458f-ad26-e033af18eb99",
+    "displayName": "User account added to built in domain local or global group",
+    "installedVersion": "1.3.5",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "a4ce20ae-a2e4-4d50-b40d-d49f1353b6cc",
+    "displayName": "IP address of Windows host encoded in web request",
+    "installedVersion": "1.0.1",
+    "authorName": "Thomas McElroy"
+  },
+  {
+    "contentId": "a5b3429d-f1da-42b9-883c-327ecb7b91ff",
+    "displayName": "Workspace deletion activity from an infected device",
+    "installedVersion": "1.0.6",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "a6c435a2-b1a0-466d-b730-9f8af69262e8",
+    "displayName": "Brute force attack against user credentials (Uses Authentication Normalization)",
+    "installedVersion": "1.2.2",
+    "authorName": "Ofer Shezaf"
+  },
+  {
+    "contentId": "a7564d76-ec6b-4519-a66b-fcc80c42332b",
+    "displayName": "Group created then added to built in domain local or global group",
+    "installedVersion": "1.1.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "aa1eff90-29d4-49dc-a3ea-b65199f516db",
+    "displayName": "New user created and added to the built-in administrators group",
+    "installedVersion": "1.1.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "ac9e233e-44d4-45eb-b522-6e47445f6582",
+    "displayName": "Potential Fodhelper UAC Bypass (ASIM Version)",
+    "installedVersion": "1.0.5",
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "ae10c588-7ff7-486c-9920-ab8b0bdb6ede",
+    "displayName": "Mercury - Domain, Hash and IP IOCs - August 2022",
+    "installedVersion": "1.1.0",
+    "authorName": "Ajeet Prakash"
+  },
+  {
+    "contentId": "af435ca1-fb70-4de1-92c1-7435c48482a9",
+    "displayName": "Authentications of Privileged Accounts Outside of Expected Controls",
+    "installedVersion": "1.0.2",
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "b6d03b88-4d27-49a2-9c1c-29f1ad2842dc",
+    "displayName": "CreepyDrive URLs",
+    "installedVersion": "1.0.1",
+    "authorName": "Thomas McElroy"
+  },
+  {
+    "contentId": "ba144bf8-75b8-406f-9420-ed74397f9479",
+    "displayName": "IP with multiple failed Microsoft Entra ID logins successfully logs in to Palo Alto VPN",
+    "installedVersion": "1.0.1",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "baedfdf4-7cc8-45a1-81a9-065821628b83",
+    "displayName": "RunningRAT request parameters",
+    "installedVersion": "1.0.1",
+    "authorName": "Thomas McElroy"
+  },
+  {
+    "contentId": "bc5ffe2a-84d6-48fe-bc7b-1055100469bc",
+    "displayName": "SUNBURST and SUPERNOVA backdoor hashes (Normalized File Events)",
+    "installedVersion": "1.0.5",
+    "authorName": "Yaron"
+  },
+  {
+    "contentId": "bca9c877-2afc-4246-a26d-087ab1cdcd5f",
+    "displayName": "Prestige ransomware IOCs Oct 2022",
+    "installedVersion": "1.0.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "bdf04f58-242b-4729-b376-577c4bdf5d3a",
+    "displayName": "Midnight Blizzard - suspicious rundll32.exe execution of vbscript (Normalized Process Events)",
+    "installedVersion": "1.1.3",
+    "authorName": "Yuval Naor"
+  },
+  {
+    "contentId": "be52662c-3b23-435a-a6fa-f39bdfc849e6",
+    "displayName": "High Number of Urgent Vulnerabilities Detected",
+    "installedVersion": "1.0.2",
+    "authorName": "chicduong"
+  },
+  {
+    "contentId": "c094384d-7ea7-4091-83be-18706ecca981",
+    "displayName": "DNS events related to mining pools (ASIM DNS Schema)",
+    "installedVersion": "1.3.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "c1faf5e8-6958-11ec-90d6-0242ac120003",
+    "displayName": "Fake computer account created",
+    "installedVersion": "1.0.1",
+    "authorName": "Vasileios Paschalidis"
+  },
+  {
+    "contentId": "c2da1106-bfe4-4a63-bf14-5ab73130ccd5",
+    "displayName": "AppServices AV Scan Failure",
+    "installedVersion": "1.0.2",
+    "authorName": "SecurityJedi"
+  },
+  {
+    "contentId": "c3b11fb2-9201-4844-b7b9-6b7bf6d9b851",
+    "displayName": "Excessive NXDOMAIN DNS Queries (ASIM DNS Schema)",
+    "installedVersion": "1.3.3",
+    "authorName": "Yaron"
+  },
+  {
+    "contentId": "cc5780ce-3245-4bba-8bc1-e9048c2257ce",
+    "displayName": "Changes to Application Ownership",
+    "installedVersion": "1.0.1",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "ce74dc9a-cb3c-4081-8c2f-7d39f6b7bae1",
+    "displayName": "Identify Mango Sandstorm powershell commands",
+    "installedVersion": "1.0.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "cfc1ae62-db63-4a3e-b88b-dc04030c2257",
+    "displayName": "AD FS Abnormal EKU object identifier attribute",
+    "installedVersion": "1.0.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "d0255b5f-2a3c-4112-8744-e6757af3283a",
+    "displayName": "Unusual Anomaly",
+    "installedVersion": "1.0.1",
+    "authorName": "Jose Sebastian Canos"
+  },
+  {
+    "contentId": "d0c82b7f-40b2-4180-a4d6-7aa0541b7599",
+    "displayName": "PulseConnectSecure - CVE-2021-22893 Possible Pulse Connect Secure RCE Vulnerability Attack",
+    "installedVersion": "1.0.1",
+    "authorName": "Sittikorn S"
+  },
+  {
+    "contentId": "d2bc08fa-030a-4eea-931a-762d27c6a042",
+    "displayName": "Application Gateway WAF - XSS Detection",
+    "installedVersion": "1.0.1",
+    "authorName": "shabaz-github"
+  },
+  {
+    "contentId": "d714ef62-1a56-4779-804f-91c4158e528d",
+    "displayName": "Modification of Accessibility Features",
+    "installedVersion": "1.0.1",
+    "authorName": "Vasileios Paschalidis"
+  },
+  {
+    "contentId": "d7feb859-f03e-4e8d-8b21-617be0213b13",
+    "displayName": "Addition of a Temporary Access Pass to a Privileged Account",
+    "installedVersion": "1.0.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "d82e1987-4356-4a7b-bc5e-064f29b143c0",
+    "displayName": "Midnight Blizzard - suspicious rundll32.exe execution of vbscript",
+    "installedVersion": "1.1.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "d82eb796-d1eb-43c8-a813-325ce3417cef",
+    "displayName": "Dev-0530 File Extension Rename",
+    "installedVersion": "1.0.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "dc99e38c-f4e9-4837-94d7-353ac0b01a77",
+    "displayName": "User account created without expected attributes defined",
+    "installedVersion": "1.0.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "dd78a122-d377-415a-afe9-f22e08d2112c",
+    "displayName": "Service Principal Assigned App Role With Sensitive Access",
+    "installedVersion": "1.0.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "defe4855-0d33-4362-9557-009237623976",
+    "displayName": "Suspicious Login from deleted guest account",
+    "installedVersion": "1.0.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "e4779bdc-397a-4b71-be28-59e6a1e1d16b",
+    "displayName": "Zoom E2E Encryption Disabled",
+    "installedVersion": "1.0.2",
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "e70fa6e0-796a-4e85-9420-98b17b0bb749",
+    "displayName": "Solorigate Defender Detections",
+    "installedVersion": "1.0.3",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "ed8c9153-6f7a-4602-97b4-48c336b299e1",
+    "displayName": "COM Registry Key Modified to Point to File in Color Profile Folder",
+    "installedVersion": "1.0.1",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "eda260eb-f4a1-4379-ad98-452604da9b3e",
+    "displayName": "CreepyDrive request URL sequence",
+    "installedVersion": "1.0.1",
+    "authorName": "Thomas McElroy"
+  },
+  {
+    "contentId": "ee55dc85-d2da-48c1-a6c0-3eaee62a8d56",
+    "displayName": "User Account Created Using Incorrect Naming Format",
+    "installedVersion": "1.0.1",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "ef895ada-e8e8-4cf0-9313-b1ab67fab69f",
+    "displayName": "Authentication Attempt from New Country",
+    "installedVersion": "1.1.0",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "f2dd4a3a-ebac-4994-9499-1a859938c947",
+    "displayName": "Time series anomaly for data size transferred to public internet",
+    "installedVersion": "1.0.4",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "f68a5046-b7eb-4f69-9519-1e99708bb9e0",
+    "displayName": "PE file dropped in Color Profile Folder",
+    "installedVersion": "1.0.1",
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "f7c3f5c8-71ea-49ff-b8b3-148f0e346291",
+    "displayName": "Anomolous Single Factor Signin",
+    "installedVersion": "1.0.2",
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "f7f4a77e-f68f-4b56-9aaf-a0c9d87d7a8e",
+    "displayName": "Users searching for VIP user activity",
+    "installedVersion": "1.1.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "f819c592-c5f9-4d5c-a79f-1e6819863533",
+    "displayName": "Microsoft Entra ID Health Monitoring Agent Registry Keys Access",
+    "installedVersion": "1.1.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "f845881e-2500-44dc-8ed7-b372af3e1e25",
+    "displayName": "Anomalous User Agent connection attempt",
+    "installedVersion": "1.0.2",
+    "authorName": "Microsoft Security Research"
+  },
+  {
+    "contentId": "f8b3c49c-4087-499b-920f-0dcfaff0cbca",
+    "displayName": "Base64 encoded Windows process command-lines (Normalized Process Events)",
+    "installedVersion": "1.1.2",
+    "authorName": "Yuval Naor"
+  },
+  {
+    "contentId": "06c52a66-fffe-4d3b-a05a-646ff65b7ec2",
+    "displayName": "RareDNSLookupWithDataTransfer",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "0b520385-6a16-4e6f-ba89-c320d857695f",
+    "displayName": "Alerts related to IP",
+    "installedVersion": "1.0.0",
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "0da142a4-b3ad-4bb6-b01d-03b572743fe9",
+    "displayName": "User Granted Access and associated audit activity",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "11d808a1-32fe-4618-946a-cfd43523347a",
+    "displayName": "Alerts related to File",
+    "installedVersion": "1.0.0",
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "1dd98313-f43f-4d8b-9870-5a1dfb2cf93f",
+    "displayName": "New client running queries",
+    "installedVersion": null,
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "22f33a4c-e60f-4817-bbfe-9e2ed33cb596",
+    "displayName": "Failed service logon attempt by user account with available AuditData",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "29752996-e85d-4905-a0e1-a7dcdfcda283",
+    "displayName": "New domain added to Whitelist",
+    "installedVersion": null,
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "2bf19f27-0466-4c16-a821-ce84e524476d",
+    "displayName": "Query looking for secrets",
+    "installedVersion": null,
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "2f6032ac-bb18-48b0-855a-7b05cf074957",
+    "displayName": "External IP address in Command Line",
+    "installedVersion": null,
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "3169dc83-9e97-452c-afcc-baebdb0ddf7c",
+    "displayName": "Discord download invoked from cmd line (ASIM Version)",
+    "installedVersion": null,
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "33aa0e01-87e2-43ea-87f9-2f7e3ff1d532",
+    "displayName": "Detect beacon like pattern based on repetitive time intervals in Wire Data Traffic",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "3de523b5-9608-43d5-801e-732c741dd82e",
+    "displayName": "Rare User Agent strings",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "42831fb3-f61d-41e9-95d9-f08797479a0e",
+    "displayName": "Azure CloudShell Usage",
+    "installedVersion": null,
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "431cccd3-2dff-46ee-b34b-61933e45f556",
+    "displayName": "Tracking Privileged Account Rare Activity",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "467e6a70-adc9-49b7-8cf3-f21927c71159",
+    "displayName": "GitHub OAuth App Restrictions Disabled",
+    "installedVersion": null,
+    "authorName": "itay6588"
+  },
+  {
+    "contentId": "472e83d6-ccec-47b8-b1cd-75500f936981",
+    "displayName": "Permutations on logon attempts by UserPrincipalNames indicating potential brute force",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "4eb6d052-9873-4092-b989-66eae780e203",
+    "displayName": "Signin Logs with expanded Conditional Access Policies",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "4edbb420-2df7-4089-9906-c335f065803e",
+    "displayName": "Same IP address with multiple csUserAgent",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "528c1708-a67e-4e2f-b76d-d5e5e88a22aa",
+    "displayName": "Login spike with increase failure rate",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "562900b1-39c4-4baf-a050-9cad1641db35",
+    "displayName": "Failed Login Attempt by Expired account",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "5c799718-b361-4a91-9cb2-0c291e602707",
+    "displayName": "Rare Audit activity initiated by App",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "5ca3868b-9245-4573-894c-55a935736018",
+    "displayName": "New time zone observed",
+    "installedVersion": null,
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "61a6edc0-e71a-4084-8f3c-05a58e1b9012",
+    "displayName": "Alerts On Host",
+    "installedVersion": "1.0.0",
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "66d494c0-233c-438a-9b1b-5fe839790d38",
+    "displayName": "Check critical ports opened to the entire internet",
+    "installedVersion": null,
+    "authorName": "Alethor"
+  },
+  {
+    "contentId": "66fb97d1-55c3-4268-ac22-b9742d0fdccc",
+    "displayName": "Rare domains seen in Cloud Logs",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "6cb193f3-7c6d-4b53-9153-49a09be830d7",
+    "displayName": "Crash dump disabled on host (ASIM Version)",
+    "installedVersion": null,
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "73ac88c0-f073-4b23-8ac4-9f40ea11308d",
+    "displayName": "Anomalous Microsoft Entra ID apps based on authentication location",
+    "installedVersion": "1.0.0",
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "745a22ec-fed8-49b9-9f62-4570b7709da4",
+    "displayName": "Microsoft Entra ID sign-in burst from multiple locations",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "75fd68a2-9ed4-4a1c-8bd7-18efe4c99081",
+    "displayName": "Login attempt by Blocked MFA user",
+    "installedVersion": null,
+    "authorName": "Ajeet Prakash"
+  },
+  {
+    "contentId": "79cf4646-0959-442f-9707-60fc66eb8145",
+    "displayName": "Zoom room high CPU alerts",
+    "installedVersion": null,
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "7f6e8f14-62fa-4ce6-a490-c07f1d9888ba",
+    "displayName": "Anomalous sign-in location by user account and authenticating application - with sign-in details",
+    "installedVersion": "1.0.0",
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "8159c663-6724-41b8-9ae8-b328aa8d0c4c",
+    "displayName": "Anomalous sign-in location by user account and authenticating application",
+    "installedVersion": "1.0.0",
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "847c2652-547d-4d5f-9b71-d2f8d81eac62",
+    "displayName": "Inactive or new account signins",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "8699df3f-f89e-431f-9dea-056c4ce7014a",
+    "displayName": "User returning more data than daily average",
+    "installedVersion": null,
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "8c4fb385-98b0-4ef5-b3da-65db0fb22d89",
+    "displayName": "New users running queries",
+    "installedVersion": null,
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "8f18c6ea-fcd0-4d9a-a8fd-19a6aaa1660c",
+    "displayName": "Cross workspace query anomolies",
+    "installedVersion": null,
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "934011da-1fe6-4507-aadb-d3914c877bcd",
+    "displayName": "Potential IIS brute force",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "959fe0f0-7ac0-467c-944f-5b8c6fdc9e72",
+    "displayName": "Disabled accounts using Squid proxy",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "96977c95-74b4-4cc2-b1a7-6a3ab17bd3f9",
+    "displayName": "Potential IIS code injection attempt",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "97543188-a4e8-4439-980d-17b231149617",
+    "displayName": "Query data volume anomolies",
+    "installedVersion": null,
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "98e4df23-7bd2-480d-814a-a03f77efc670",
+    "displayName": "New ServicePrincipal running queries",
+    "installedVersion": null,
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "a2fca6ac-1155-4eec-934b-65aa62cdbb09",
+    "displayName": "User running multiple queries that fail",
+    "installedVersion": null,
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "a523786c-8382-4029-80e9-f1a7ecd067c1",
+    "displayName": "Suspect Mailbox Export on IIS/OWA",
+    "installedVersion": null,
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "a787a819-40df-4c9f-a5ae-850d5a2a0cf6",
+    "displayName": "URI requests from single client",
+    "installedVersion": null,
+    "authorName": "Thomas McElroy"
+  },
+  {
+    "contentId": "ac25d05d-362d-4a8d-b4e7-58c0edd2379c",
+    "displayName": "Anomalous Resource Creation and related Network Activity",
+    "installedVersion": "1.0.0",
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "b09d6e57-c48b-491d-9c2b-ab73018e6534",
+    "displayName": "Consent to Application discovery",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "b6baa3bb-a231-4e50-8ad1-4e28a958a0d3",
+    "displayName": "User Granted Access and created resources",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "bac44fe4-c0bc-4e90-aa48-2e346fda803f",
+    "displayName": "Tracking Password Changes",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "bc17381e-07ee-48a2-931f-06a3d9e149c9",
+    "displayName": "Same User - Successful logon for a given App and failure on another App within 1m and low distribution",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "ccef3c74-4b4f-445b-8109-06d38687e4a4",
+    "displayName": "GitHub Repo Clone - Time Series Anomly",
+    "installedVersion": null,
+    "authorName": "itay6588"
+  },
+  {
+    "contentId": "cd11d6a1-e2ad-47fa-9a9f-4c70b143d4fd",
+    "displayName": "Multiple large queries made by user",
+    "installedVersion": null,
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "cf83633e-5dfd-4887-993b-c910452439da",
+    "displayName": "Failed attempt to access Azure Portal",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "d0a3cb7b-375e-402d-9827-adafe0ce386d",
+    "displayName": "Web shell file alert enrichment",
+    "installedVersion": null,
+    "authorName": "Thomas McElroy"
+  },
+  {
+    "contentId": "d2e6f31b-add1-4f44-b54d-1975a5605c1d",
+    "displayName": "Web shell command alert enrichment",
+    "installedVersion": null,
+    "authorName": "Thomas McElroy"
+  },
+  {
+    "contentId": "e119c365-9213-45a1-bbd7-8faf6d103d30",
+    "displayName": "User denied multiple registration events successfully registering",
+    "installedVersion": null,
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "ea107ccc-2b80-410e-96e1-be6607ce293b",
+    "displayName": "Rare Audit activity initiated by User",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "Add-IP-Entity-To-Named-Location",
+    "displayName": "Add IP Entity To Named Location",
+    "installedVersion": "1.0.0",
+    "authorName": "Brian Delaney"
+  },
+  {
+    "contentId": "Create-AzureDevOpsTask-alert-trigger",
+    "displayName": "Create-AzureDevOpsTask-alert-trigger",
+    "installedVersion": null,
+    "authorName": "Nicholas DiCola"
+  },
+  {
+    "contentId": "Create-AzureDevOpsTask-incident-trigger",
+    "displayName": "Create-AzureDevOpsTask-incident-trigger",
+    "installedVersion": null,
+    "authorName": "Nicholas DiCola"
+  },
+  {
+    "contentId": "Create-Zendesk-Ticket",
+    "displayName": "Create Zendesk ticket",
+    "installedVersion": null,
+    "authorName": "Brian Delaney"
+  },
+  {
+    "contentId": "Enrich-Incident-Alienvault-OTX",
+    "displayName": "Enrich multiple entities - AlienVault-OTX",
+    "installedVersion": null,
+    "authorName": "Brian Delaney"
+  },
+  {
+    "contentId": "AcscEssential8",
+    "displayName": "ACSC Essential 8",
+    "installedVersion": null,
+    "authorName": "Microsoft Corporation"
+  },
+  {
+    "contentId": "AdvancedWorkbookConcepts",
+    "displayName": "Advanced Workbook Concepts",
+    "installedVersion": null,
+    "authorName": "Microsoft Sentinel Community"
+  },
+  {
+    "contentId": "ADXvsLA",
+    "displayName": "ADXvsLA",
+    "installedVersion": null,
+    "authorName": "Naomi"
+  },
+  {
+    "contentId": "AMAmigrationTracker",
+    "displayName": "AMA migration tracker",
+    "installedVersion": null,
+    "authorName": "mariavaladas"
+  },
+  {
+    "contentId": "AnalyticsHealthAudit",
+    "displayName": "Analytics Health & Audit",
+    "installedVersion": null,
+    "authorName": "Microsoft Corporation"
+  },
+  {
+    "contentId": "ArchivingBasicLogsRetention",
+    "displayName": "Archiving, Basic Logs, and Retention",
+    "installedVersion": null,
+    "authorName": "seanstark-ms"
+  },
+  {
+    "contentId": "ASC-ComplianceandProtection",
+    "displayName": "ASC Compliance and Protection",
+    "installedVersion": null,
+    "authorName": "Matt Lowe"
+  },
+  {
+    "contentId": "AWSS3",
+    "displayName": "AWS S3 Workbook",
+    "installedVersion": null,
+    "authorName": "Clive Watson"
+  },
+  {
+    "contentId": "AzureAuditActivityAndSigninWorkbook",
+    "displayName": "Azure AD Audit, Activity and Sign-in logs",
+    "installedVersion": null,
+    "authorName": "Sem Tijsseling"
+  },
+  {
+    "contentId": "AzureInformationProtectionWorkbook",
+    "displayName": "Insecure Protocols",
+    "installedVersion": null,
+    "authorName": "Amit Bergman"
+  },
+  {
+    "contentId": "AzureLogCoverage",
+    "displayName": "Azure Log Coverage",
+    "installedVersion": null,
+    "authorName": "Alex Anders"
+  },
+  {
+    "contentId": "AzureNetworkWatcherWorkbook",
+    "displayName": "Azure Network Watcher",
+    "installedVersion": null,
+    "authorName": "Microsoft Corporation"
+  },
+  {
+    "contentId": "AzureSensitiveOperationsReview",
+    "displayName": "Azure SensitiveOperations Review Workbook",
+    "installedVersion": null,
+    "authorName": "Microsoft Corporation"
+  },
+  {
+    "contentId": "CiscoFirepower",
+    "displayName": "Cisco Firepower",
+    "installedVersion": null,
+    "authorName": "Samik Roy"
+  },
+  {
+    "contentId": "ConditionalAccessTrendsandChangesWorkbook",
+    "displayName": "Conditional Access Trends and Changes",
+    "installedVersion": null,
+    "authorName": "Microsoft Sentinel Community"
+  },
+  {
+    "contentId": "DataCollectionHealthMonitoring",
+    "displayName": "Data collection health monitoring",
+    "installedVersion": null,
+    "authorName": "morshabi"
+  },
+  {
+    "contentId": "DataCollectionRuleToolkit",
+    "displayName": "Data Collection Rule Toolkit",
+    "installedVersion": null,
+    "authorName": "Microsoft Sentinel Community"
+  },
+  {
+    "contentId": "DoDZeroTrustWorkbook",
+    "displayName": "DoD Zero Trust Strategy Workbook",
+    "installedVersion": null,
+    "authorName": "Lili Davoudian, Chhorn Lim, Jay Pelletier, Michael Crane"
+  },
+  {
+    "contentId": "DSTIMWorkbook",
+    "displayName": "Data Security - Sensitive Data Impact Assessment",
+    "installedVersion": null,
+    "authorName": "avital-m"
+  },
+  {
+    "contentId": "EsetSMCWorkbook",
+    "displayName": "Eset Security Management Center Overview",
+    "installedVersion": null,
+    "authorName": "Tomáš Kubica"
+  },
+  {
+    "contentId": "ExchangeCompromiseHunting",
+    "displayName": "Exchange Compromise Hunting",
+    "installedVersion": null,
+    "authorName": "Pete Bryan"
+  },
+  {
+    "contentId": "InsecureProtocolsWorkbook",
+    "displayName": "Insecure Protocols",
+    "installedVersion": null,
+    "authorName": "Microsoft Corporation"
+  },
+  {
+    "contentId": "IoT-Alerts",
+    "displayName": "Azure Defender for IoT Alerts",
+    "installedVersion": null,
+    "authorName": "morshabi"
+  },
+  {
+    "contentId": "IoTAssetDiscovery",
+    "displayName": "IoT Asset Discovery",
+    "installedVersion": null,
+    "authorName": "jomeczyk"
+  },
+  {
+    "contentId": "Log4jPostCompromiseHunting",
+    "displayName": "Log4j Post Compromise Hunting",
+    "installedVersion": null,
+    "authorName": "Samik Roy"
+  },
+  {
+    "contentId": "LogAnalyticsQueryAnalysis",
+    "displayName": "Log Analytics Query Analysis",
+    "installedVersion": null,
+    "authorName": "Samik Roy"
+  },
+  {
+    "contentId": "LogSourcesAndAnalyticRulesCoverageWorkbook",
+    "displayName": "Log Sources & Analytic Rules Coverage",
+    "installedVersion": null,
+    "authorName": "Eli Forbes"
+  },
+  {
+    "contentId": "manualincident",
+    "displayName": "Incident Management with Microsoft Sentinel Manual Creation of Incidents Workbook",
+    "installedVersion": null,
+    "authorName": "Microsoft Sentinel Community"
+  },
+  {
+    "contentId": "Microsoft365SecurityPosture",
+    "displayName": "Microsoft 365 Security Posture",
+    "installedVersion": null,
+    "authorName": "Matt Lowe"
+  },
+  {
+    "contentId": "MicrosoftSentinelCostEUR",
+    "displayName": "Microsoft Sentinel Cost (EUR)",
+    "installedVersion": null,
+    "authorName": "Marco Passanisi"
+  },
+  {
+    "contentId": "MicrosoftSentinelCostGBP",
+    "displayName": "Microsoft Sentinel Cost (GBP)",
+    "installedVersion": null,
+    "authorName": "noodlemctwoodle"
+  },
+  {
+    "contentId": "MicrosoftSentinelDeploymentandMigrationTracker",
+    "displayName": "Microsoft Sentinel Deployment and Migration Tracker",
+    "installedVersion": null,
+    "authorName": "Matt Lowe"
+  },
+  {
+    "contentId": "NormalizedNetworkEventsWorkbook",
+    "displayName": "Normalized network events",
+    "installedVersion": null,
+    "authorName": "yoav fransis"
+  },
+  {
+    "contentId": "OneIdentityWorkbook",
+    "displayName": "One Identity",
+    "installedVersion": null,
+    "authorName": "Amit Bergman"
+  },
+  {
+    "contentId": "OptimizationWorkbook",
+    "displayName": "Microsoft Sentinel Optimization Workbook",
+    "installedVersion": null,
+    "authorName": "Jeremy Tan, Matthew Lowe, Margaret Mwaura"
+  },
+  {
+    "contentId": "pfsense",
+    "displayName": "pfsense",
+    "installedVersion": null,
+    "authorName": "dicolanl"
+  },
+  {
+    "contentId": "PlaybooksHealth",
+    "displayName": "Playbooks health monitoring (preview)",
+    "installedVersion": null,
+    "authorName": "Microsoft Corporation"
+  },
+  {
+    "contentId": "ProofPointThreatDashboard",
+    "displayName": "ProofPoint Threat Dashboard",
+    "installedVersion": null,
+    "authorName": "reprise99"
+  },
+  {
+    "contentId": "SentinelCosts",
+    "displayName": "Sentinel Costs",
+    "installedVersion": null,
+    "authorName": "Yahya Abulhaj"
+  },
+  {
+    "contentId": "SentinelHealth",
+    "displayName": "Sentinel Health",
+    "installedVersion": null,
+    "authorName": "Samik Roy"
+  },
+  {
+    "contentId": "SentinelWorkspaceReconTools",
+    "displayName": "Sentinel Workspace Recon Tools",
+    "installedVersion": null,
+    "authorName": "Andrew Blumhardt"
+  },
+  {
+    "contentId": "Sentinel_Central",
+    "displayName": "Sentinel Central",
+    "installedVersion": null,
+    "authorName": "Clive Watson"
+  },
+  {
+    "contentId": "SolarWindsPostCompromiseHuntingWorkbook",
+    "displayName": "SolarWinds Post Compromise Hunting",
+    "installedVersion": null,
+    "authorName": "Shain"
+  },
+  {
+    "contentId": "SyslogOverview",
+    "displayName": "Syslog Overview",
+    "installedVersion": null,
+    "authorName": "Samik Roy"
+  },
+  {
+    "contentId": "SysmonThreatHuntingWorkbook",
+    "displayName": "Sysmon Threat Hunting",
+    "installedVersion": null,
+    "authorName": "Edoardo Gerosa"
+  },
+  {
+    "contentId": "UnifiSGNetflowWorkbook",
+    "displayName": "Unifi Security Gateway - NetFlow",
+    "installedVersion": null,
+    "authorName": "SecurityJedi"
+  },
+  {
+    "contentId": "UnifiSGWorkbook",
+    "displayName": "Unifi Security Gateway",
+    "installedVersion": null,
+    "authorName": "SecurityJedi"
+  },
+  {
+    "contentId": "UserEntityBehaviorAnalyticsWorkbook",
+    "displayName": "User And Entity Behavior Analytics",
+    "installedVersion": null,
+    "authorName": "Microsoft Corporation"
+  },
+  {
+    "contentId": "UserMap",
+    "displayName": "User Map information",
+    "installedVersion": null,
+    "authorName": "Clive Watson"
+  },
+  {
+    "contentId": "VirtualMachinesInsightsWorkbook",
+    "displayName": "VM insights",
+    "installedVersion": null,
+    "authorName": "Microsoft Corporation"
+  },
+  {
+    "contentId": "VisualizationDemo",
+    "displayName": "Visualizations Demo",
+    "installedVersion": null,
+    "authorName": "Matt Lowe"
+  },
+  {
+    "contentId": "WorkspaceAuditingWorkbook",
+    "displayName": "Workspace audit",
+    "installedVersion": null,
+    "authorName": "Sarah Young"
+  },
+  {
+    "contentId": "WorkspaceUsage",
+    "displayName": "Workspace Usage Report",
+    "installedVersion": null,
+    "authorName": "Clive Watson"
+  }
+]
