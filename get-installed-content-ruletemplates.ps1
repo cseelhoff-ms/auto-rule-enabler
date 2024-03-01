@@ -65,12 +65,15 @@ foreach($content in $installedContent) {
             $kind = $dependency.kind
             Write-Host $kind
             $ruleTemplate = Invoke-AzRestMethod -Method GET -path ("/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.OperationalInsights/workspaces/$workspaceName/providers/Microsoft.SecurityInsights/alertRuleTemplates/$contentId" + '?api-version=' + $apiVersion)
-            $ruleDisplayName = $ruleTemplate.Content | ConvertFrom-Json | Select-Object -ExpandProperty properties | Select-Object -ExpandProperty displayName
+            $ruleProperties = $ruleTemplate.Content | ConvertFrom-Json | Select-Object -ExpandProperty properties
+            $ruleDisplayName = $ruleProperties | Select-Object -ExpandProperty displayName
+            $ruleQuery = $ruleProperties | Select-Object -ExpandProperty query
             $results.add([PSCustomObject]@{
                 DisplayName = $contentName
                 contentId = $contentId
                 kind = $kind
                 RuleName = $ruleDisplayName
+                query = $ruleQuery
             })
         }
     }
