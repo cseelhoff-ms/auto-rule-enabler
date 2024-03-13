@@ -56,7 +56,11 @@ $tablesResponse = Invoke-AzRestMethod -Method GET -Path $tablesUri | Select-Obje
 # Iterate through each table
 $totalTables = $tablesResponse.Count
 
-$desiredRetention = Read-Host -Prompt "Enter the desired total retention (interactive retention plus archive retention) period in days (default is 365)" -Default 365
+$desiredRetention = Read-Host -Prompt "Enter the desired total retention (interactive retention plus archive retention) period in days (default is 365)"
+# set $desiredRetention to 365 if the user does not provide a value
+if (-not $desiredRetention) {
+    $desiredRetention = 365
+}
 
 # Notify the user how many tables are not set to 365 days and prompt the user if they would like to update the retention period
 $non365Tables = $tablesResponse | Where-Object { $_.properties.totalRetentionInDays -ne $desiredRetention }
