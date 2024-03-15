@@ -62,12 +62,19 @@ if (-not $desiredRetention) {
     $desiredRetention = 365
 }
 
+$totalRetentionInDaysAsDefaultResponse = Read-Host -Prompt "Would you like to set the totalRetentionInDaysAsDefault to False (recommended)? (Y/N)"
+if ($totalRetentionInDaysAsDefaultResponse.ToUpper() -ne 'N') {
+    $totalRetentionInDaysAsDefault = $false
+} else {
+    $totalRetentionInDaysAsDefault = $true
+}
+
 # Notify the user how many tables are not set to 365 days and prompt the user if they would like to update the retention period
-$non365Tables = $tablesResponse | Where-Object { $_.properties.totalRetentionInDays -ne $desiredRetention }
+$non365Tables = $tablesResponse | Where-Object { $_.properties.totalRetentionInDays -ne $desiredRetention -or $_.properties.totalRetentionInDaysAsDefault -ne $totalRetentionInDaysAsDefault}
 if ($non365Tables.Count -eq 0) {
     Write-Host "All tables have totalRetentionInDays set to $desiredRetention. No action required." -ForegroundColor Green
 } else {
-    $updateRetention = Read-Host -Prompt "There are $($non365Tables.Count) tables with totalRetentionInDays not set to $desiredRetention. Would you like to update the retention period? (Y/N)"
+    $updateRetention = Read-Host -Prompt "There are $($non365Tables.Count) tables with totalRetentionInDays not set to $desiredRetention or not set to Default=$totalRetentionInDaysAsDefault . Would you like to update the retention period settings? (Y/N)"
     if ($updateRetention -eq 'Y') {       
 
         $currentTable = 0
@@ -86,7 +93,7 @@ if ($non365Tables.Count -eq 0) {
             Write-Progress @progress
 
             # Check if totalRetentionInDays is already 365
-            if ($table.properties.totalRetentionInDays -eq $desiredRetention) {
+            if ($table.properties.totalRetentionInDays -eq $desiredRetention -and $table.properties.totalRetentionInDaysAsDefault -eq $totalRetentionInDaysAsDefault) {
                 Write-Host "Table $tableId already has totalRetentionInDays set to $desiredRetention. Skipping..."
                 continue
             }
@@ -96,9 +103,10 @@ if ($non365Tables.Count -eq 0) {
             $tableProperties = @{
                 properties = @{
                     totalRetentionInDays = $desiredRetention
+                    totalRetentionInDaysAsDefault = $totalRetentionInDaysAsDefault
                 }
             }
-            Write-Host "Setting totalRetentionInDays to $desiredRetention for table $tableId"
+            Write-Host "Setting totalRetentionInDays to $desiredRetention and totalRetentionInDaysAsDefault to $totalRetentionInDaysAsDefault for table $tableId"
             $jobs += Start-Job -ScriptBlock {
                 param($tableUri, $tableProperties)
                 Invoke-AzRestMethod -Method PATCH -Path $tableUri -Payload ($tableProperties | ConvertTo-Json -Depth 2)
