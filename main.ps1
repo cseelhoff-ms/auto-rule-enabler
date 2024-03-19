@@ -56,12 +56,25 @@ $tablesResponse = Invoke-AzRestMethod -Method GET -Path $tablesUri | Select-Obje
 # Iterate through each table
 $totalTables = $tablesResponse.Count
 
-# Notify the user how many tables are not set to 365 days and prompt the user if they would like to update the retention period
-$non365Tables = $tablesResponse | Where-Object { $_.properties.totalRetentionInDays -ne 365 }
-if ($non365Tables.Count -eq 0) {
-    Write-Host "All tables have totalRetentionInDays set to 365. No action required." -ForegroundColor Green
+$desiredRetention = Read-Host -Prompt "Enter the desired total retention (interactive retention plus archive retention) period in days (default is 365)"
+# set $desiredRetention to 365 if the user does not provide a value
+if (-not $desiredRetention) {
+    $desiredRetention = 365
+}
+
+$totalRetentionInDaysAsDefaultResponse = Read-Host -Prompt "Would you like to set the totalRetentionInDaysAsDefault to False (recommended)? (Y/N)"
+if ($totalRetentionInDaysAsDefaultResponse.ToUpper() -ne 'N') {
+    $totalRetentionInDaysAsDefault = $false
 } else {
-    $updateRetention = Read-Host -Prompt "There are $($non365Tables.Count) tables with totalRetentionInDays not set to 365. Would you like to update the retention period? (Y/N)"
+    $totalRetentionInDaysAsDefault = $true
+}
+
+# Notify the user how many tables are not set to 365 days and prompt the user if they would like to update the retention period
+$non365Tables = $tablesResponse | Where-Object { $_.properties.totalRetentionInDays -ne $desiredRetention -or $_.properties.totalRetentionInDaysAsDefault -ne $totalRetentionInDaysAsDefault}
+if ($non365Tables.Count -eq 0) {
+    Write-Host "All tables have totalRetentionInDays set to $desiredRetention. No action required." -ForegroundColor Green
+} else {
+    $updateRetention = Read-Host -Prompt "There are $($non365Tables.Count) tables with totalRetentionInDays not set to $desiredRetention or not set to Default=$totalRetentionInDaysAsDefault . Would you like to update the retention period settings? (Y/N)"
     if ($updateRetention -eq 'Y') {       
 
         $currentTable = 0
@@ -80,8 +93,8 @@ if ($non365Tables.Count -eq 0) {
             Write-Progress @progress
 
             # Check if totalRetentionInDays is already 365
-            if ($table.properties.totalRetentionInDays -eq 365) {
-                Write-Host "Table $tableId already has totalRetentionInDays set to 365. Skipping..."
+            if ($table.properties.totalRetentionInDays -eq $desiredRetention -and $table.properties.totalRetentionInDaysAsDefault -eq $totalRetentionInDaysAsDefault) {
+                Write-Host "Table $tableId already has totalRetentionInDays set to $desiredRetention. Skipping..."
                 continue
             }
 
@@ -89,10 +102,11 @@ if ($non365Tables.Count -eq 0) {
             $tableUri = $tableId + "?api-version=$apiVersion"
             $tableProperties = @{
                 properties = @{
-                    totalRetentionInDays = 365
+                    totalRetentionInDays = $desiredRetention
+                    totalRetentionInDaysAsDefault = $totalRetentionInDaysAsDefault
                 }
             }
-            Write-Host "Setting totalRetentionInDays to 365 for table $tableId"
+            Write-Host "Setting totalRetentionInDays to $desiredRetention and totalRetentionInDaysAsDefault to $totalRetentionInDaysAsDefault for table $tableId"
             $jobs += Start-Job -ScriptBlock {
                 param($tableUri, $tableProperties)
                 Invoke-AzRestMethod -Method PATCH -Path $tableUri -Payload ($tableProperties | ConvertTo-Json -Depth 2)
@@ -123,6 +137,7 @@ if ($uebaSettings.StatusCode -eq 404 -or $uebaSettings.StatusCode -eq 400) {
     Read-Host -Prompt "Press Enter to continue"
 }
 
+$apiVersion = '2023-04-01-preview'
 $EntityAnalyticsSettings = Invoke-AzRestMethod -Method GET -path "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.OperationalInsights/workspaces/$workspaceName/providers/Microsoft.SecurityInsights/settings/EntityAnalytics?api-version=$apiVersion"
 $entityProviders = $EntityAnalyticsSettings.Content | ConvertFrom-Json | Select-Object -ExpandProperty properties | Select-Object -ExpandProperty entityProviders
 #if $entityProviders does not contain 'ActiveDirectory' and 'AzureActiveDirectory' then prompt the user if they would like to enable UEBA
@@ -141,7 +156,6 @@ if ($entityProviders -notcontains 'AzureActiveDirectory') {
 }
 
 # Get a list of installed content hub objects
-$apiVersion = '2023-04-01-preview'
 $installedContentJSON = Invoke-AzRestMethod -Method GET -path "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.OperationalInsights/workspaces/$workspaceName/providers/Microsoft.SecurityInsights/contentProductPackages?api-version=$apiVersion"
 $installedContent = $installedContentJSON.Content | ConvertFrom-Json | Select-Object -ExpandProperty value
 $installedContent | Select-Object -ExpandProperty properties | Select-Object -Property contentId, displayName, installedVersion, @{Name='authorName'; Expression={$_.author.name}} | ConvertTo-Json | Out-File installed.json
@@ -161,59 +175,52 @@ $alertRulesJson =  Invoke-AzRestMethod -Method GET -path  "/subscriptions/$subsc
 $alertRules = $alertRulesJson.Content | ConvertFrom-Json | Select-Object -ExpandProperty 'value'
 
 # Output number of analytic rules found
-Write-Host "$($ruleTemplates.count) Analytic Rules found"
+Write-Host "$($ruleTemplates.count) Analytic Rule Templates found"
 # Initialize job array and counter
 $jobs = @()
 $currentJob = 0
 
 # Loop through rule templates and create rules
 foreach ($ruleTemplate in $ruleTemplates) {
-    # Start a new job for each rule template
-    $jobs += Start-Job -ScriptBlock {
-        param($ruleTemplate, $alertRules, $subscriptionId, $resourceGroupName, $workspaceName, $apiVersion)
-
-        $templateRuleDisplayName = $ruleTemplate.properties.displayName
-        Write-Host "Processing rule: $templateRuleDisplayName"
-        # Verify if the rule already exists
-        $ruleTemplateContentId = $ruleTemplate.properties.contentId
-        $matchingRules =  $alertRules | Where-Object { $_.properties.alertRuleTemplateName -eq $ruleTemplateContentId }
-        if (($matchingRules | Measure-Object | Select-Object -ExpandProperty Count) -gt 0) {
-            Write-Host "Rule already exists`n" -ForegroundColor Yellow
-            continue
-        }    
-        $ruleTemplateDetails = Invoke-AzRestMethod -Method GET -path ($ruleTemplate.id + '?api-version=' + $apiVersion)
-        $newRule = $ruleTemplateDetails.Content | ConvertFrom-Json | Select-Object -ExpandProperty properties | Select-Object -ExpandProperty mainTemplate | Select-Object -ExpandProperty resources | Select-Object -First 1
-        # Create and enable rule
-        Write-Host "Creating rule $templateRuleDisplayName... " -NoNewline
-        $newRule.properties | Add-Member -NotePropertyName alertRuleTemplateName -NotePropertyValue $ruleTemplateContentId
-        $newRule.properties | Add-Member -NotePropertyName templateVersion -NotePropertyValue $ruleTemplate.version
-        $apiPath = "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.OperationalInsights/workspaces/$workspaceName/providers/Microsoft.SecurityInsights/alertRules/$($ruleTemplateContentId)?api-version=$apiVersion"
-        $payload = $newRule | ConvertTo-Json -Depth 99
-        $result = Invoke-AzRestMethod -Method PUT -path $apiPath -Payload $payload
-        if ($result.StatusCode -in 200, 201) {
-            Write-Host "Rule $templateRuleDisplayName has been created`n" -ForegroundColor Green
-        } else {
-            Write-Host ($result.Content + "`n") -ForegroundColor Red
-        }
-        # enable the rule
-        $ruleId = $result.Content | ConvertFrom-Json | Select-Object -ExpandProperty id
-        $enableRule = Invoke-AzRestMethod -Method POST -path ($ruleId + '/enable?api-version=' + $apiVersion)
-        if ($enableRule.StatusCode -in 200, 201) {
-            Write-Host "Rule $templateRuleDisplayName has been enabled`n" -ForegroundColor Green
-        } else {
-            Write-Host ($enableRule.Content + "`n") -ForegroundColor Red
-        }
-
-    } -ArgumentList $ruleTemplate, $alertRules, $subscriptionId, $resourceGroupName, $workspaceName, $apiVersion
-
-    # Update the progress bar
     $currentJob++
+    # Update the progress bar
     $progress = @{
-        Activity = "Creating and enabling rules"
+        Activity = "Creating rules"
         Status = "Processing rule $currentJob of $($ruleTemplates.Count)"
         PercentComplete = ($currentJob / $ruleTemplates.Count) * 100
     }
     Write-Progress @progress
+
+    $matchingRules =  $alertRules | Where-Object { $_.properties.alertRuleTemplateName -eq $ruleTemplateContentId}
+    if (($matchingRules | Measure-Object | Select-Object -ExpandProperty Count) -gt 0) {
+        Write-Host "Rule: $($ruleTemplate.properties.displayName) already exists.`n"
+        continue
+    }
+
+    # Start a new job for each rule template
+    $jobs += Start-Job -ScriptBlock {
+        param($ruleTemplate, $alertRules, $subscriptionId, $resourceGroupName, $workspaceName)
+        $apiVersion = '2023-04-01-preview'
+        $templateRuleDisplayName = $ruleTemplate.properties.displayName
+        #Write-Host "Processing rule: $templateRuleDisplayName..." -NoNewline
+        $ruleTemplateContentId = $ruleTemplate.properties.contentId
+        $rulePath = "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.OperationalInsights/workspaces/$workspaceName/providers/Microsoft.SecurityInsights/alertRules/$($ruleTemplateContentId)"
+        $apiPath = $rulePath + "?api-version=$apiVersion"        
+        $ruleTemplateDetails = Invoke-AzRestMethod -Method GET -path ($ruleTemplate.id + '?api-version=' + $apiVersion)
+        $newRule = $ruleTemplateDetails.Content | ConvertFrom-Json | Select-Object -ExpandProperty properties | Select-Object -ExpandProperty mainTemplate | Select-Object -ExpandProperty resources | Select-Object -First 1
+        # Create and enable rule
+        Write-Host "`nCreating rule $templateRuleDisplayName... " -NoNewline
+        $newRule.properties | Add-Member -NotePropertyName alertRuleTemplateName -NotePropertyValue $ruleTemplateContentId
+        $newRule.properties | Add-Member -NotePropertyName templateVersion -NotePropertyValue $ruleTemplate.version
+        $payload = $newRule | ConvertTo-Json -Depth 99
+        $result = Invoke-AzRestMethod -Method PUT -path $apiPath -Payload $payload
+        if ($result.StatusCode -notin 200, 201) {
+            $message1 = ($result.Content) | ConvertFrom-Json | Select-Object -ExpandProperty error | Select-Object -ExpandProperty message
+            Write-Host ("Error: " + $message1 + "`n") -ForegroundColor Red
+            return
+        }
+        Write-Host "Rule $templateRuleDisplayName has been created.`n" -ForegroundColor Green
+    } -ArgumentList $ruleTemplate, $alertRules, $subscriptionId, $resourceGroupName, $workspaceName
 
     # If we've reached the maximum number of concurrent jobs, wait for one to finish before starting a new one
     if ($jobs.Count -ge 10) {
@@ -224,9 +231,70 @@ foreach ($ruleTemplate in $ruleTemplates) {
     }
 }
 
+Write-Host "Waiting for all Alert Creation jobs to complete..."
 # Wait for all remaining jobs to complete
 $null = $jobs | Wait-Job | Receive-Job
 
+Write-Host "Cleaning up the Alert Creation jobs..."
 # Clean up the jobs
 $jobs | Remove-Job
 
+# Get existing rules that are not enabled
+$alertRulesJson =  Invoke-AzRestMethod -Method GET -path  "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.OperationalInsights/workspaces/$workspaceName/providers/Microsoft.SecurityInsights/alertRules?api-version=$apiVersion"
+#$alertRules = $alertRulesJson.Content | ConvertFrom-Json | Select-Object -ExpandProperty 'value' | Where-Object {$_.properties.enabled -eq $false -and $_.properties.severity -notin ('Informational', 'Low')}
+$alertRules = $alertRulesJson.Content | ConvertFrom-Json | Select-Object -ExpandProperty 'value' | Where-Object {$_.properties.enabled -eq $false}
+
+# Output number of analytic rules found
+Write-Host "$($alertRules.count) Disabled Analytic Rules found"
+# Initialize job array and counter
+$jobs = @()
+$currentJob = 0
+
+#loop through each alert rule that is not enabled and enable it
+foreach ($alertRule in $alertRules) {
+    $jobs += Start-Job -ScriptBlock {
+        param($alertRule, $subscriptionId, $resourceGroupName, $workspaceName)
+        Write-Host "Enabling Rule: $($alertRule.properties.displayName)... " -NoNewline
+        $apiVersion = '2023-04-01-preview'
+        $ruleId = $alertRule.id
+        $ruleProperties = $alertRule.properties
+        $ruleProperties.PSObject.Properties.Remove('lastModifiedUtc')
+        $ruleProperties | Add-Member -NotePropertyName enabled -NotePropertyValue $true -Force
+        $payload = @{properties = $ruleProperties} | ConvertTo-Json -Depth 99
+        $apiPath = $ruleId + '?api-version=' + $apiVersion
+        $enableRule = Invoke-AzRestMethod -Method PUT -path $apiPath -Payload $payload
+        if ($enableRule.StatusCode -in 200, 201) {
+            Write-Host "Rule $($alertRule.properties.displayName) has been enabled`n" -ForegroundColor Green
+        } else {
+            $message1 = ($enableRule.Content) | ConvertFrom-Json | Select-Object -ExpandProperty error | Select-Object -ExpandProperty message
+            Write-Host ("Error: " + $message1 + "`n") -ForegroundColor Red
+        }
+    } -ArgumentList $alertRule, $subscriptionId, $resourceGroupName, $workspaceName
+    
+    # Update the progress bar
+    $currentJob++
+    $progress = @{
+        Activity = "Enabling rules"
+        Status = "Processing rule $currentJob of $($alertRules.Count)"
+        PercentComplete = ($currentJob / $alertRules.Count) * 100
+    }
+    Write-Progress @progress
+
+    # If we've reached the maximum number of concurrent jobs, wait for one to finish before starting a new one
+    if ($jobs.Count -ge 10) {
+        $finishedJob = $jobs | Wait-Job -Any
+        $jobs = $jobs | Where-Object -Property Id -NE $finishedJob.Id
+        $finishedJob | Receive-Job
+        $finishedJob | Remove-Job
+    }
+}
+
+Write-Host "Waiting for all jobs to complete..."
+# Wait for all remaining jobs to complete
+$jobs | Wait-Job | Receive-Job
+
+Write-Host "Cleaning up the jobs..."
+# Clean up the jobs
+$jobs | Remove-Job
+
+Write-Host "All jobs have completed" -ForegroundColor Green
