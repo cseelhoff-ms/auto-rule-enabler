@@ -11,7 +11,7 @@ import json
 # Open the JSON file
 with open('vms.json', 'r') as file:
     # Load the JSON data from the file
-    data = json.load(file)
+    vms = json.load(file)
 
 # Now 'data' is a list of dictionaries that you can use in your code
 print(vms)
