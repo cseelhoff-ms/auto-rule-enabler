@@ -1,0 +1,14 @@
+[
+    {
+        "resource-group": "ResourceGroup1",
+        "vmname": "VM1"
+    },
+    {
+        "resource-group": "ResourceGroup2",
+        "vmname": "VM2"
+    },
+    {
+        "resource-group": "ResourceGroup3",
+        "vmname": "VM3"
+    }
+]
