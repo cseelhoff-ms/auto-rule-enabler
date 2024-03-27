@@ -4,6 +4,7 @@ import subprocess
   
 # Check if Azure CLI is installed, if not install it
 if os.system('az --version') != 0:
+    print("Azure CLI is not installed. Installing now...")
     subprocess.check_call(["curl", "-sL", "https://aka.ms/InstallAzureCLIDeb", "|", "sudo", "bash"])
 
 # Check if already logged in
@@ -16,10 +17,11 @@ except subprocess.CalledProcessError:
     subprocess.check_call(["az", "login", "--use-device-code"])
 
 # use sed to replace the AgentResourceUsage diskQuotaInMB value in the mdsd.xml file to 90000
-linux_command = 'sudo sed -i \'s|<AgentResourceUsage diskQuotaInMB="50000" />|<AgentResourceUsage diskQuotaInMB="90000" />|g\' /etc/opt/microsoft/azuremonitoragent/mdsd.xml\n'
-# use powershell to replace the AgentResourceUsage diskQuotaInMB value in the mdsd.xml file to 90000
-windows_command = "(Get-Content -Path C:\\ProgramData\\Microsoft\\AzureMonitor\\Agent\\mdsd.xml -Raw) -replace '<AgentResourceUsage diskQuotaInMB=\"50000\" />','<AgentResourceUsage diskQuotaInMB=\"90000\" />' | Set-Content -Path C:\\ProgramData\\Microsoft\\AzureMonitor\\Agent\\mdsd.xml"
-
+linux_command = 'sudo sed -i \'s|<AgentResourceUsage diskQuotaInMB="[0-9]*" />|<AgentResourceUsage diskQuotaInMB="90000" />|g\' /etc/opt/microsoft/azuremonitoragent/mdsd.xml'
+# use powershell to replace the AgentResourceUsage diskQuotaInMB value in the mcsconfig.latest.xml file to 90000
+windows_command1 = "(Get-Content -Path C:\\WindowsAzure\\Resources\\AMADataStore." 
+windows_command2 = "\\mcs\\mcsconfig.latest.xml -Raw) -replace '<AgentResourceUsage diskQuotaInMB=\"\\d+\" />','<AgentResourceUsage diskQuotaInMB=\"90000\" />' | Set-Content -Path C:\\WindowsAzure\\Resources\\AMADataStore."
+windows_command3 = "\\mcs\\mcsconfig.latest.xml"
 
 with open('vms.json', 'r') as file:
     vms = json.load(file)
@@ -28,7 +30,7 @@ with open('vms.json', 'r') as file:
 for vm in vms:
     vm_name = vm['vmname']
     resource_group = vm['resource-group']
-    location = vm['location']
+    print(f"VM Name: {vm_name}, Resource Group: {resource_group}")
 
     # Define the command to get the VM details
     command = ["az", "vm", "show", "--name", vm_name, "--resource-group", resource_group, "--query", "storageProfile.osDisk.osType", "--output", "tsv"]
@@ -38,9 +40,12 @@ for vm in vms:
 
     # Check if the VM is windows or linux and run the appropriate command shell script or powershell script:
     if output.strip() == 'Linux':
+        print("Running Linux command")
         run_command = ["az", "vm", "run-command", "invoke", "--command-id", "RunShellScript", "--name", vm_name, "--resource-group", resource_group, "--scripts", linux_command]
         subprocess.check_call(run_command)
     elif output.strip() == 'Windows':
+        print("Running Windows command")
+        windows_command = windows_command1 + vm_name + windows_command2 + vm_name + windows_command3
         run_command = ["az", "vm", "run-command", "invoke", "--command-id", "RunPowerShellScript", "--name", vm_name, "--resource-group", resource_group, "--scripts", windows_command]
         subprocess.check_call(run_command)
 
@@ -60,10 +65,11 @@ for machine in connected_machines:
 
     # Check if the VM is windows or linux and run the appropriate command shell script or powershell script:
     if output.strip() == 'Linux':
-        # run command using connectedmachine run-command create
+        print("Running Linux command")
         run_command = ["az", "connectedmachine", "run-command", "create", "--name", machine_name, "--resource-group", resource_group, "--script", linux_command]
         subprocess.check_call(run_command)
     elif output.strip() == 'Windows':
-        # run command using connectedmachine run-command create
+        print("Running Windows command")
+        windows_command = windows_command1 + machine_name + windows_command2 + machine_name + windows_command3
         run_command = ["az", "connectedmachine", "run-command", "create", "--name", machine_name, "--resource-group", resource_group, "--script", windows_command]
         subprocess.check_call(run_command)
