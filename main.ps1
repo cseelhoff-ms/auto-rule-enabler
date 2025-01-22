@@ -191,7 +191,7 @@ foreach ($ruleTemplate in $ruleTemplates) {
     }
     Write-Progress @progress
 
-    $matchingRules =  $alertRules | Where-Object { $_.properties.alertRuleTemplateName -eq $ruleTemplateContentId}
+    $matchingRules =  $alertRules | Where-Object { $_.properties.alertRuleTemplateName -eq $ruleTemplate.properties.contentId}
     if (($matchingRules | Measure-Object | Select-Object -ExpandProperty Count) -gt 0) {
         Write-Host "Rule: $($ruleTemplate.properties.displayName) already exists.`n"
         continue
@@ -205,7 +205,7 @@ foreach ($ruleTemplate in $ruleTemplates) {
         #Write-Host "Processing rule: $templateRuleDisplayName..." -NoNewline
         $ruleTemplateContentId = $ruleTemplate.properties.contentId
         $rulePath = "/subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.OperationalInsights/workspaces/$workspaceName/providers/Microsoft.SecurityInsights/alertRules/$($ruleTemplateContentId)"
-        $apiPath = $rulePath + "?api-version=$apiVersion"        
+        $apiPath = $rulePath + "?api-version=$apiVersion"
         $ruleTemplateDetails = Invoke-AzRestMethod -Method GET -path ($ruleTemplate.id + '?api-version=' + $apiVersion)
         $newRule = $ruleTemplateDetails.Content | ConvertFrom-Json | Select-Object -ExpandProperty properties | Select-Object -ExpandProperty mainTemplate | Select-Object -ExpandProperty resources | Select-Object -First 1
         # Create and enable rule
